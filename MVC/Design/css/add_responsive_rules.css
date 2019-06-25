@@ -1,0 +1,850 @@
+
+@media screen and (min-width: 2400px) and (max-width: 3000px) {
+
+}
+/*---------------------------------width 1920 started-----------------------------------*/
+@media screen and (min-width: 1920px) and (max-width: 2400px) {
+
+}
+/*---------------------------------width 1920 completed-----------------------------------*/
+/*---------------------------------width 1600 started-----------------------------------*/
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+ 
+}
+/*---------------------------------width 1600 completed-----------------------------------*/
+/*---------------------------------width 1170 started-----------------------------------*/
+@media screen and (min-width: 1200px) and (max-width: 1279px) {
+
+}
+/*---------------------------------width 1200 completed-----------------------------------*/
+/*---------------------------------width 1024 started-------------------------------------*/
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+
+}
+/*--------------------------------width 1024 completed-----------------------------------*/
+/*---------------------------------width 992 started-------------------------------------*/
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+
+
+}
+ /*------------------------width 992 completed----------------------------------------------- */
+/*------------------------------------width 768 started---------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+/*================================================
+                blog styles
+==================================================*/
+ .blog-sub-head h2
+ {
+  font-size: 20px;
+ }
+ /*text area*/
+ .blog-text-main h3
+ {
+  font-size: 18px;
+  padding-left: 10px;
+ }
+ .blog-text-main p
+ {
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+ }
+ .blog-text-main span
+ {
+  padding-left: 10px;
+ }
+ .blog-text-main h5
+ {
+  padding-left: 10px;
+ }
+ .blog-text-main h6
+ {
+  padding-left: 10px;
+ }
+ /*---------footer section---------*/
+ .footer-copy
+ {
+  padding-top: 15px;
+ }
+ .footer-copy p
+ {
+  font-size: 10px;
+ }
+  /*====================================================
+                 standalone styles
+ ======================================================*/
+ /*team*/
+ .alt-team-content p
+ {
+  padding-bottom: 30px;
+ }
+ /*====================================================
+                 shortcode styles
+ ======================================================*/
+ /*heading*/
+ .short-head p
+ {
+  padding: 20px 30px;
+  font-size: 12px;
+  line-height: 24px;
+ }
+ .block_skills h3
+ {
+  margin-top: 50px;
+ }
+ .stitle
+ {
+  margin-bottom: 50px;
+ }
+
+}
+ /*------------------------width 768 completed----------------------------------------------- */
+/*------------------------600 optimization started-------------------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 767px){
+
+/*================================================
+                blog styles
+==================================================*/
+ .blog-sub-head h2
+ {
+  font-size: 20px;
+ }
+ /*text area*/
+ .blog-text-main h3
+ {
+  font-size: 18px;
+  padding-left: 10px;
+ }
+ .blog-text-main p
+ {
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+ }
+ .blog-text-main span
+ {
+  padding-left: 10px;
+ }
+ .blog-text-main h5
+ {
+  padding-left: 10px;
+ }
+ .blog-text-main h6
+ {
+  padding-left: 10px;
+ }
+ /*---------footer section---------*/
+ .footer-copy
+ {
+  padding-top: 15px;
+ }
+ .footer-copy p
+ {
+  font-size: 10px;
+ }
+ /*====================================================
+                 coming soon styles
+ ======================================================*/
+ .com-img img
+ {
+  /*width: 25%;
+  height: auto;*/
+ }
+ .com-head-text h1
+ {
+  letter-spacing: 2px;  
+  font-size: 40px;
+ }
+ .com-head-text h3
+ {
+  letter-spacing: 2px;  
+  font-size: 14px;
+ }
+ /*clock area*/
+ .flip-clock-wrapper ul 
+ {
+  width: 50px;
+  height: 75px;
+  font-size: 10px;
+ }
+ .flip-clock-wrapper ul li a div 
+ {
+  width: 100%;
+  height: 50%;
+  font-size: 10px;
+ }
+ .flip-clock-wrapper ul li a div div.inn 
+ {
+  font-size: 45px; 
+ }
+   /*====================================================
+                 page not found styles
+ ======================================================*/
+ 
+ .found-text-main h1
+ {
+  font-size: 60px;
+ }
+ .found-text-main h2
+ {
+  font-size: 14px;
+  letter-spacing: 5px;
+  padding: 5px 30px;
+ }
+ .found-text-main a
+ {
+  margin: 30px 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+ }
+   /*====================================================
+                 standalone styles
+ ======================================================*/
+ /*header*/
+ .stand-head h1
+ {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-top: 150px;
+ }
+ /*content*/
+ .stand-content-head h1
+ {
+  margin-top: 15px;
+  font-size: 40px;
+ }
+ .stand-text-box p
+ {
+  padding-bottom: 30px;
+  line-height: 28px;
+ }
+ /*team*/
+ .alt-team-content p
+ {
+  padding-bottom: 30px;
+ }
+ /*====================================================
+                 shortcode styles
+ ======================================================*/
+ /*heading*/
+ .short-head p
+ {
+  padding: 20px 10px;
+  font-size: 12px;
+  line-height: 24px;
+ }
+ /*main heading style in shortcodes*/
+ .short-main-heads h2
+ {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 28px;
+ }
+ .short-basic-text p
+ {
+  padding-bottom: 30px;
+ }
+ .sh-tab-area ul li a
+ {
+  font-size: 12px;
+ }
+ .block_skills h3
+ {
+  margin-top: 50px;
+ }
+ .stitle
+ {
+  margin-bottom: 50px;
+ }
+
+}
+ /*-------------------------- width  600 optimisation completed----------------------------------*/
+ /*--------------------------- width 480 optimization started------------------------------------*/
+@media screen and (min-width: 480px) and (max-width: 599px) {
+
+/*================================================
+                blog styles
+==================================================*/
+ .blog-sub-head h2
+ {
+  font-size: 20px;
+ }
+ /*text area*/
+ .blog-text-main h3
+ {
+  font-size: 18px;
+  padding-left: 10px;
+ }
+ .blog-text-main p
+ {
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+ }
+ .blog-text-main span
+ {
+  padding-left: 10px;
+ }
+ .blog-text-main h5
+ {
+  padding-left: 10px;
+ }
+ .blog-text-main h6
+ {
+  padding-left: 10px;
+ }
+ /*---------footer section---------*/
+ .footer-copy
+ {
+  padding-top: 15px;
+ }
+ .footer-copy p
+ {
+  font-size: 10px;
+ }
+  /*====================================================
+                 coming soon styles
+ ======================================================*/
+ .com-img img
+ {
+  width: 25%;
+  height: auto;
+ }
+ .com-head-text h1
+ {
+  letter-spacing: 2px;  
+  font-size: 30px;
+ }
+ .com-head-text h3
+ {
+  letter-spacing: 2px;  
+  font-size: 14px;
+ }
+ /*clock area*/
+ .com-center
+ {
+  margin-left: 14%;
+ }
+ .flip-clock-wrapper ul {
+  width: 60px;
+  height: 75px;
+  font-size: 10px;
+}
+ .flip-clock-wrapper ul li a div 
+ {
+  width: 100%;
+  height: 50%;
+  font-size: 10px;
+ }
+ .flip-clock-wrapper ul li a div div.inn 
+ {
+  font-size: 55px; 
+ }
+  /*====================================================
+                 page not found styles
+ ======================================================*/
+ 
+ .found-text-main h1
+ {
+  font-size: 60px;
+ }
+ .found-text-main h2
+ {
+  font-size: 14px;
+  letter-spacing: 5px;
+  padding: 5px 30px;
+ }
+ .found-text-main a
+ {
+  margin: 30px 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+ }
+    /*====================================================
+                 standalone styles
+ ======================================================*/
+ /*content*/
+ .stand-content-head h1
+ {
+  margin-top: 15px;
+  font-size: 40px;
+ }
+ .stand-text-box p
+ {
+  padding-bottom: 30px;
+  line-height: 28px;
+ }
+ /*team*/
+ .alt-team-content p
+ {
+  padding-bottom: 30px;
+ }
+   /*====================================================
+                 standalone styles
+ ======================================================*/
+ /*header*/
+ .stand-head h1
+ {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-top: 150px;
+ }
+ /*content*/
+ .stand-content-head h1
+ {
+  margin-top: 15px;
+  font-size: 40px;
+ }
+ .stand-text-box p
+ {
+  padding-bottom: 30px;
+  line-height: 28px;
+ }
+ /*team*/
+ .alt-team-content p
+ {
+  padding-bottom: 30px;
+ }
+ /*====================================================
+                 shortcode styles
+ ======================================================*/
+ /*heading*/
+ .short-head h1
+ {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 80px;
+ }
+ .short-head p
+ {
+  padding: 20px 10px;
+  font-size: 12px;
+  line-height: 24px;
+ }
+ /*main heading style in shortcodes*/
+ .short-main-heads h2
+ {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 28px;
+ }
+ .short-basic-text p
+ {
+  padding-bottom: 30px;
+ }
+ .sh-tab-area ul li a
+ {
+  font-size: 12px;
+ }
+ .block_skills h3
+ {
+  margin-top: 50px;
+ }
+ .stitle
+ {
+  margin-bottom: 50px;
+ }
+
+ 
+}
+/*--------------------------max width  480 optimisation completed----------------------------------*/
+
+/*--------------------------width  360 optimisation started----------------------------------------*/
+
+@media screen and (min-width: 360px) and (max-width: 479px) {
+
+/*================================================
+                blog styles
+==================================================*/
+ .blog-sub-head h2
+ {
+  font-size: 20px;
+ }
+ /*text area*/
+ .blog-text-main h3
+ {
+  font-size: 18px;
+  padding-left: 10px;
+ }
+ .blog-text-main p
+ {
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+ }
+ .blog-text-main span
+ {
+  padding-left: 10px;
+ }
+ .blog-text-main h5
+ {
+  padding-left: 10px;
+ }
+ .blog-text-main h6
+ {
+  padding-left: 10px;
+ }
+ /*---------footer section---------*/
+ .footer-copy
+ {
+  padding-top: 15px;
+ }
+ .footer-copy p
+ {
+  font-size: 10px;
+ }
+  /*====================================================
+                 coming soon styles
+ ======================================================*/
+ .com-img img
+ {
+  width: 25%;
+  height: auto;
+ }
+ .com-head-text h1
+ {
+  letter-spacing: 2px;  
+  font-size: 30px;
+ }
+ .com-head-text h3
+ {
+  letter-spacing: 2px;  
+  font-size: 14px;
+ }
+ /*clock area*/
+ .com-center
+ {
+  margin-left:  10%;
+ }
+ .flip-clock-wrapper ul {
+  width: 50px;
+  height: 78px;
+  font-size: 10px;
+}
+ .flip-clock-wrapper ul li a div 
+ {
+  width: 100%;
+  height: 50%;
+  font-size: 10px;
+ }
+ .flip-clock-wrapper ul li a div div.inn 
+ {
+  font-size: 35px; 
+ }
+  /*====================================================
+                 page not found styles
+ ======================================================*/
+ .found-text-main
+{
+  top: 20%;
+  left: 0%;
+
+  -webkit-transform: translateX(0%);
+     -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+       -o-transform: translateX(0%);
+          transform: translateX(0%);
+}
+ .found-text-main h1
+ {
+  font-size: 60px;
+ }
+ .found-text-main h2
+ {
+  font-size: 14px;
+  letter-spacing: 5px;
+  padding: 5px 30px;
+ }
+ .found-text-main a
+ {
+  margin: 30px 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+ }
+   /*====================================================
+                 standalone styles
+ ======================================================*/
+ /*header*/
+ .stand-head h1
+ {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-top: 150px;
+ }
+ /*content*/
+ .stand-content-head h1
+ {
+  margin-top: 15px;
+  font-size: 40px;
+ }
+ .stand-text-box p
+ {
+  padding-bottom: 30px;
+  line-height: 28px;
+ }
+ /*team*/
+ .alt-team-content p
+ {
+  padding-bottom: 30px;
+ }
+   /*====================================================
+                 standalone styles
+ ======================================================*/
+ /*header*/
+ .stand-head h1
+ {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-top: 150px;
+ }
+ /*content*/
+ .stand-content-head h1
+ {
+  margin-top: 15px;
+  font-size: 40px;
+ }
+ .stand-text-box p
+ {
+  padding-bottom: 30px;
+  line-height: 28px;
+ }
+ /*team*/
+ .alt-team-content p
+ {
+  padding-bottom: 30px;
+ }
+ /*====================================================
+                 shortcode styles
+ ======================================================*/
+ /*heading*/
+ .short-head h1
+ {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 80px;
+ }
+ .short-head p
+ {
+  padding: 20px 10px;
+  font-size: 12px;
+  line-height: 24px;
+ }
+ /*main heading style in shortcodes*/
+ .short-main-heads h2
+ {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 28px;
+ }
+ .short-basic-text p
+ {
+  padding-bottom: 30px;
+ }
+ .sh-tab-area ul li a
+ {
+  font-size: 12px;
+ }
+ .block_skills h3
+ {
+  margin-top: 50px;
+ }
+ .stitle
+ {
+  margin-bottom: 50px;
+ }
+
+} /*responsive 360 full cmpleted*/
+   
+/*--------------------------max width  360 optimisation completed----------------------------------*/
+/*============================max width  320 optimisation started===================================*/
+@media screen and (min-width: 320px) and (max-width: 359px) {
+
+/*================================================
+                blog styles
+==================================================*/
+ .blog-sub-head h2
+ {
+  font-size: 20px;
+ }
+ /*text area*/
+ .blog-text-main h3
+ {
+  font-size: 18px;
+  padding-left: 10px;
+
+ }
+ .blog-text-main p
+ {
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+ }
+ .blog-text-main span
+{
+  padding-left: 10px;
+}
+ .blog-text-main h5
+ {
+  padding-left: 10px;
+ }
+ .blog-text-main h6
+ {
+  padding-left: 10px;
+ }
+ /*---------footer section---------*/
+ .footer-copy
+ {
+  padding-top: 15px;
+ }
+ .footer-copy p
+ {
+  font-size: 10px;
+ }
+ /*====================================================
+                 coming soon styles
+ ======================================================*/
+ .com-img img
+ {
+  width: 25%;
+  height: auto;
+ }
+ .com-head-text h1
+ {
+  letter-spacing: 2px;  
+  font-size: 30px;
+ }
+ .com-head-text h3
+ {
+  letter-spacing: 2px;  
+  font-size: 14px;
+ }
+ /*clock area*/
+ .com-center
+ {
+  margin-left: 10%;
+ }
+ .flip-clock-wrapper ul {
+  width: 41px;
+  height: 68px;
+  font-size: 10px;
+}
+ .flip-clock-wrapper ul li a div 
+ {
+  width: 100%;
+  height: 50%;
+  font-size: 10px;
+ }
+ .flip-clock-wrapper ul li a div div.inn 
+ {
+  font-size: 35px; 
+ }
+ /*====================================================
+                 page not found styles
+ ======================================================*/
+ .found-text-main
+{
+  top: 20%;
+  left: 0%;
+
+  -webkit-transform: translateX(0%);
+     -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+       -o-transform: translateX(0%);
+          transform: translateX(0%);
+}
+ .found-text-main h1
+ {
+  font-size: 50px;
+ }
+ .found-text-main h2
+ {
+  font-size: 14px;
+  letter-spacing: 5px;
+  padding: 5px 30px;
+ }
+ .found-text-main a
+ {
+  margin: 30px 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+ }
+  /*====================================================
+                 standalone styles
+ ======================================================*/
+ /*header*/
+ .stand-head h1
+ {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-top: 150px;
+ }
+ /*content*/
+ .stand-content-head h1
+ {
+  margin-top: 15px;
+  font-size: 40px;
+ }
+ .stand-text-box p
+ {
+  padding-bottom: 30px;
+  line-height: 28px;
+ }
+ /*team*/
+ .alt-team-content p
+ {
+  padding-bottom: 30px;
+ }
+ /*====================================================
+                 shortcode styles
+ ======================================================*/
+ /*heading*/
+ .short-head h1
+ {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 80px;
+ }
+ .short-head p
+ {
+  padding: 20px 10px;
+  font-size: 12px;
+  line-height: 24px;
+ }
+ /*main heading style in shortcodes*/
+ .short-main-heads h2
+ {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 28px;
+ }
+ .short-basic-text p
+ {
+  padding-bottom: 30px;
+ }
+ .sh-tab-area ul li a
+ {
+  font-size: 12px;
+ }
+ .block_skills h3
+ {
+  margin-top: 50px;
+ }
+ .stitle
+ {
+  margin-bottom: 50px;
+ } 
+
+}  
+/*----------------------------responsive 320 full cmpleted--------------------------------------*/
+ 

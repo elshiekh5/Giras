@@ -1,0 +1,65 @@
+﻿@model MVC.ViewModels.HomeViewModel
+
+@{
+    this.Layout = "~/Views/Shared/_LayoutWide.cshtml";
+
+  
+}
+
+<!-- ======================= Inner section =========================== -->
+<section ID="inner">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="inners">
+                    <h2 class="inner-tittel">ألبوم الصور</h2>
+
+                    <div class="port-nav">
+                        <ul class="filter" id="port-menu">
+                            <li><a href="#" class="port-hover filter active" data-group="all">الكل</a><span>&nbsp; &nbsp;/</span></li>
+                            @foreach (var item in Model.LatestAlbums)
+                            {
+                                <li>
+                                    <a href="#" class="filter" data-group="@item.ItemID">@item.Title</a>
+                                    <span>&nbsp; &nbsp;/</span>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                    <div id="grid" class="port-row">
+                        @foreach (var photo in Model.LatestAlbumsFiles)
+                        {
+                            <div class="port-tile-main" data-groups='["all", "@photo.ItemID"]'>
+                                <div class="port-tile">
+                                    <div class="port-img"><img src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl)/Content/UpFiles/_Site/ItemCategories/0/Items/@(photo.ItemID)/Files/ItemFiles_@(photo.FileID)-thumb.jpg" class="img-responsive" alt="port"></div>
+                                    <div class="fg-port-left"></div>
+                                    <div class="fg-port-sland-left"></div>
+                                    <div class="fg-port-sland-left-content">
+                                        <h1>@photo.Title</h1>
+                                        <h2>@photo.ItemTitle</h2>
+                                    </div>
+                                    <div class="port-btn">
+                                        @*<a class="proj_ajax" href="project1.html"><i class="icon-link"></i></a>*@
+                                        <a href="http://localhost:2099/Content/UpFiles/_Site/ItemCategories/0/Items/@(photo.ItemID)/Files/ItemFiles_@(photo.FileID).jpg" class="myElement"><i class="icon-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- section -->
+<!-- ======================= End Inner section =========================== -->
+
+

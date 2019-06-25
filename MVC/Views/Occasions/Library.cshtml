@@ -1,0 +1,302 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+    this.Layout = "~/Views/Shared/_LayoutArticles.cshtml";
+
+    string LinkPattern = "";
+    List<AppService.FrontItemsModel> ItemsList;
+    int index = ViewBag.PageIndex;
+    int pageSize = 12;
+    int totalItemsCount = 0;
+    int categoryId = 0;
+    //int langID = (int)SiteSettings.GetCurrentLanguage();
+
+    if (ViewBag.CategoryID != null)
+    {
+        categoryId = ViewBag.CategoryID ;
+    }
+    /*
+    if (MoversFW.Components.UrlManager.ChechIsValidIntegerParameter("index"))
+    {
+        index = Convert.ToInt32(Request.QueryString["index"]);
+    }*/
+    ItemsList = AppService.FrontItemsController.GetModuleCategoryDataPageByPage(13, categoryId, "GirasArticlesPagingByCategory", index, pageSize, out totalItemsCount);
+    PagerModel pager = new PagerModel();
+    pager.TotalRecords = totalItemsCount;
+    pager.PageSize = pageSize;
+    pager.LinkPattern = "/Articles/cat/1021/page/{0}/";//SiteUrlsManager.GetDefaultPageLink(ViewBag.CurrentModule);
+    pager.CurrentPage = index;
+
+
+    ItemCategoriesEntity category = ItemCategoriesFactory.GetObject(categoryId, SiteSettings.GetCurrentLanguage(), new Guid());
+
+}
+
+
+
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="inners">
+            <h2 class="inner-tittel">مكتبة غراس</h2>
+            <div class="tab-wrap">
+                <div class="media">
+                    <div class="parrent pull-left">
+                        <ul class="nav nav-tabs nav-stacked">
+                            <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01"><i class="fa fa-headphones"></i> صوتيات</a></li>
+                            <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02"><i class="fa fa-video-camera"></i> فيديوهات</a></li>
+                            <li class=""><a href="#tab3" data-toggle="tab" class="tehnical"><i class="fa fa-file-pdf-o"></i> كتب PDF</a></li>
+                            <li class=""><a href="#tab4" data-toggle="tab" class="tehnical"><i class="fa fa-th-large"></i> تصنيفات أخرى</a></li>
+                            <li class=""><a href="#tab5" data-toggle="tab" class="tehnical"><i class="fa fa-th-large"></i> تصنيفات أخرى</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="parrent media-body">
+                        <div class="tab-content">
+                            <div class="tab-pane fade" id="tab1">
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/audio.jpg" alt="" />
+                                    <h3><a href="images/audio.jpg" class="html5lightbox" data-width=800 data-height=400 title="">عنوان المقطع</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/audio.jpg" alt="" />
+                                    <h3><a href="images/audio.jpg" class="html5lightbox" data-width=800 data-height=400 title="">عنوان المقطع</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/audio.jpg" alt="" />
+                                    <h3><a href="images/audio.jpg" class="html5lightbox" data-width=800 data-height=400 title="">عنوان المقطع</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/audio.jpg" alt="" />
+                                    <h3><a href="images/audio.jpg" class="html5lightbox" data-width=800 data-height=400 title="">عنوان المقطع</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/audio.jpg" alt="" />
+                                    <h3><a href="images/audio.jpg" class="html5lightbox" data-width=800 data-height=400 title="">عنوان المقطع</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/audio.jpg" alt="" />
+                                    <h3><a href="images/audio.jpg" class="html5lightbox" data-width=800 data-height=400 title="">عنوان المقطع</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/audio.jpg" alt="" />
+                                    <h3><a href="images/audio.jpg" class="html5lightbox" data-width=800 data-height=400 title="">عنوان المقطع</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/audio.jpg" alt="" />
+                                    <h3><a href="images/audio.jpg" class="html5lightbox" data-width=800 data-height=400 title="">عنوان المقطع</a></h3>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade active in" id="tab2">
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/video.jpg" alt="" />
+                                    <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">اسم الفيديو</a></h3>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="tab3">
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/book.jpg" alt="" />
+                                    <h3><a href="#">اسم الكتاب</a></h3>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="tab4">
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="tab5">
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                                <div class="library col-md-3 col-xs-6">
+                                    <img src="images/category.jpg" alt="" />
+                                    <h3><a href="products.html">اسم التصنيف</a></h3>
+                                </div>
+                            </div>
+
+                        </div> <!--/.tab-content-->
+                    </div> <!--/.media-body-->
+                </div> <!--/.media-->
+            </div><!--/.tab-wrap-->
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<div class="inners">
+    <h2 class="inner-tittel">@category.Title</h2>
+    <div class="subjects">
+        <div class="grid">
+            @foreach (var item in ItemsList)
+            {
+                <figure class="effect-lexi">
+                    <img src="/Content/images/img1.jpg" data-src="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathThumb)" alt="img12" />
+                    <figcaption>
+                        <h2>@item.Title</h2>
+                        <p>لمشاهدة التفاصيل اضغط هنا...</p>
+                        <a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)">View more</a>
+                    </figcaption>
+                </figure>
+            }
+            
+        </div>
+
+        @Html.Partial("~/Views/PartialViews/Pager.cshtml", pager)
+       
+
+
+    </div>
+</div>
+
+

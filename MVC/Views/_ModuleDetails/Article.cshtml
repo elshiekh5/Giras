@@ -1,0 +1,20 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+@{
+    ViewBag.Title = "View1";
+    AppService.FrontItemsModel CurrentItem = Model;
+    ViewBag.PageTitle = CurrentItem.Title;
+    this.Layout = "~/Views/Shared/_LayoutArticles.cshtml";
+}
+
+<div class="inners">
+    <h2 class="inner-tittel">@Html.Raw(CurrentItem.Title)  <span>@CurrentItem.ItemDate.ToShortDateString()</span></h2>
+    @if (CurrentItem.ItemDate > DateTime.MinValue && CurrentItem.ModuleTypeID == (int)GirasDatalayer.GirasModules.Occasions)
+    {
+        <h4 class=""><span>@CurrentItem.ItemDate.ToShortDateString()</span></h4>
+    }
+    <p>
+        @Html.Raw(CurrentItem.Description)
+    </p>
+</div>

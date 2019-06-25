@@ -1,0 +1,58 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+    string LinkPattern = "";
+    List<AppService.FrontItemsModel> ItemsList;
+    int index = ViewBag.PageIndex;
+    int pageSize = 12;
+    int totalItemsCount = 0;
+    /*
+    if (MoversFW.Components.UrlManager.ChechIsValidIntegerParameter("index"))
+    {
+        index = Convert.ToInt32(Request.QueryString["index"]);
+    }*/
+    ItemsList = AppService.FrontItemsController.GetModuleDataPageByPage(13, "GirasArticlesPagingByCategory", index, pageSize, out totalItemsCount);
+    PagerModel pager = new PagerModel();
+    pager.TotalRecords = totalItemsCount;
+    pager.PageSize = pageSize;
+    pager.LinkPattern = SiteUrlsManager.GetDefaultPageLink(ViewBag.CurrentModule);
+    pager.CurrentPage = index;
+
+
+
+}
+
+<div class="inners">
+    <h2 class="inner-tittel">مقالات وأبحاث</h2>
+    <div class="subjects">
+        <div class="grid">
+            @foreach (var item in ItemsList)
+            {
+                <figure class="effect-lexi">
+                    <img src="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.NormalPhotoThumbs)" alt="img12" />
+                    <figcaption>
+                        <h2>@item.Title</h2>
+                        <p>لمشاهدة التفاصيل اضغط هنا...</p>
+                        <a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)">View more</a>
+                    </figcaption>
+                </figure>
+            }
+            
+        </div>
+
+        <ul class="pagination">
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+        </ul>
+
+
+    </div>
+</div>
+
+

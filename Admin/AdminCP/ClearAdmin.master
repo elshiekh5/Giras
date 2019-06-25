@@ -1,0 +1,5 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ClearAdmin.master.cs" Inherits="App_Design_ClearAdmin" %>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>

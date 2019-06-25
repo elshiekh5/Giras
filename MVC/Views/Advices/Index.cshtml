@@ -1,0 +1,67 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+    this.Layout = "~/Views/Shared/_LayoutArticles.cshtml";
+
+    string LinkPattern = "";
+    List<AppService.FrontItemsModel> ItemsList;
+    int index = ViewBag.PageIndex;
+    int pageSize = 12;
+    int totalItemsCount = 0;
+    int categoryId = 0;
+    //int langID = (int)SiteSettings.GetCurrentLanguage();
+
+    if (ViewBag.CategoryID != null)
+    {
+        categoryId = ViewBag.CategoryID ;
+    }
+    /*
+    if (MoversFW.Components.UrlManager.ChechIsValidIntegerParameter("index"))
+    {
+        index = Convert.ToInt32(Request.QueryString["index"]);
+    }*/
+    ItemsList = AppService.FrontItemsController.GetModuleCategoryDataPageByPage(32, categoryId, "BlogPaging", index, pageSize, out totalItemsCount);
+    PagerModel pager = new PagerModel();
+    pager.TotalRecords = totalItemsCount;
+    pager.PageSize = pageSize;
+    pager.LinkPattern = "/Articles/all/{0}/";//SiteUrlsManager.GetDefaultPageLink(ViewBag.CurrentModule);
+    pager.CurrentPage = index;
+
+
+    ItemCategoriesEntity category = ItemCategoriesFactory.GetObject(categoryId, SiteSettings.GetCurrentLanguage(), new Guid());
+
+}
+
+<div class="inners">
+    <h2 class="inner-tittel">كبسولات تربوية</h2>
+    @if (ItemsList != null && ItemsList.Count > 0)
+    {
+
+        <div class="advice">
+@foreach (var item in ItemsList)
+{
+    <div>
+        <div class="ser-content-main">
+            <div class="col-md-2 col-xs-3 col-sm-2">
+                <div class="ser-box"> <a href="/Advices/page/@item.ItemID/"><img src="~/Content/images/advice.png" class="img-responsive" alt=""></a> </div>
+            </div>
+            <article class="col-md-10 col-xs-9 col-sm-10">
+                <h2>@item.Title </h2>
+                <p>@item.ShortDescription</p>
+            </article>
+        </div>
+        </div>
+        }
+
+    </div>
+
+}
+</div>
+@Html.Partial("~/Views/PartialViews/Pager.cshtml", pager)
+
+
+
+
+
+

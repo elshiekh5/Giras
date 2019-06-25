@@ -1,0 +1,87 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+@{
+    ViewBag.Title = "View1";
+    AppService.FrontItemsModel CurrentItem = Model;
+    List<ItemsFilesEntity> photosList = ItemsFilesFactory.GetAll(CurrentItem.ItemID, ItemFileTypes.Photo);
+    ViewBag.BodyClasses = "single single-post postid-" + CurrentItem.ItemID + " single-format-standard";
+    ViewBag.PageTitle = CurrentItem.Title;
+    
+}
+<article id="post-@(CurrentItem.ItemID)" class="box-lg post-@(CurrentItem.ItemID) post type-post status-publish format-standard has-post-thumbnail hentry category-gallery">
+    <div class="post-date">
+        <span class="day">19</span>
+        <span class="month uppercase">May</span>
+    </div>
+
+
+    <div class="image-container"><img width="1500" height="898" src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + CurrentItem.PhotoPathOriginal)" class="attachment-full size-full wp-post-image" alt="@(CurrentItem.Title)" srcset="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + CurrentItem.PhotoPathOriginal)" sizes="(max-width: 1500px) 100vw, 1500px" /></div>
+    <div class="post-content">
+        @*<div class="post-action"><div id="wp-ulike-@(CurrentItem.ItemID)" class="wpulike default"><div class="counter"><a data-ulike-id="@(CurrentItem.ItemID)" data-ulike-type="likeThis" data-ulike-status="3" class="wp_ulike_btn image"></a><span class="count-box">0</span></div></div><span class="post-share"><a href="#" class="btn btn-sm"><i class="fa fa-share"></i>Share</a><span class="share-links"><a href="http://www.facebook.com/sharer.php?s=100&#038;p%5Burl%5D=/index.php/2016/05/19/the-international-arbitration-program-april-2016/&#038;p%5Btitle%5D=%D9%81%D8%B9%D8%A7%D9%84%D9%8A%D8%A7%D8%AA+%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC+%D8%A7%D9%84%D8%AA%D8%AD%D9%83%D9%8A%D9%85+%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A+%D8%A7%D9%84%D8%AE%D8%A7%D8%B5+%D8%A8%D8%B4%D9%87%D8%B1+%D8%A5%D8%A8%D8%B1%D9%8A%D9%84+2016&#038;p%5Bimages%5D%5B0%5D=/wp-content/uploads/2016/05/@(CurrentItem.Title).jpg&#038;t=%D9%81%D8%B9%D8%A7%D9%84%D9%8A%D8%A7%D8%AA+%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC+%D8%A7%D9%84%D8%AA%D8%AD%D9%83%D9%8A%D9%85+%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A+%D8%A7%D9%84%D8%AE%D8%A7%D8%B5+%D8%A8%D8%B4%D9%87%D8%B1+%D8%A5%D8%A8%D8%B1%D9%8A%D9%84+2016&#038;u=/index.php/2016/05/19/the-international-arbitration-program-april-2016/" class="facebook" target="_blank" title="Facebook" data-toggle="tooltip" data-placement="right"><i class="fa fa-facebook"></i></a><a href="http://twitter.com/home?status=%D9%81%D8%B9%D8%A7%D9%84%D9%8A%D8%A7%D8%AA+%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC+%D8%A7%D9%84%D8%AA%D8%AD%D9%83%D9%8A%D9%85+%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A+%D8%A7%D9%84%D8%AE%D8%A7%D8%B5+%D8%A8%D8%B4%D9%87%D8%B1+%D8%A5%D8%A8%D8%B1%D9%8A%D9%84+2016+http%3A%2F%2Farbitrationar.genevahumanrights.org%2Findex.php%2F2016%2F05%2F19%2Fthe-international-arbitration-program-april-2016%2F" class="twitter" target="_blank" title="Twitter" data-toggle="tooltip" data-placement="right"><i class="fa fa-twitter"></i></a></span></span></div>*@
+        @*<h2 class="entry-title">@(CurrentItem.Title)</h2>*@
+        @*<div class="post-meta">
+                <span class="entry-author fn">by <a href="#">admin</a></span>
+                <span class="entry-author fn">in <a href="/Module/Gallery/">Photo Gallery</a></span>
+                <span class="post-comment">
+                    No Comments
+                </span>
+            </div>*@
+        <div class="vc_row wpb_row row">
+            <div class="col-sm-12 wpb_column ">
+                <div class="wpb_wrapper">
+                    <div class="container">
+                        <div class="wpb_text_column wpb_content_element ">
+                            <div class="wpb_wrapper">
+
+                                <div class="heading-box">
+                                    <h2 class="box-title">@(CurrentItem.Title)</h2>
+                                    <p class="desc-lg">@(CurrentItem.ShortDescription)</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="vc_row wpb_row row">
+        <div class="col-sm-12 wpb_column ">
+            <div class="wpb_wrapper">
+                <div class="container">
+                    <div class="wpb_text_column wpb_content_element  box-lg">
+                        <div class="wpb_wrapper">
+                            <div class="vc_grid vc_row vc_grid-gutter-10px vc_pageable-wrapper vc_hook_hover" data-vc-pageable-content="true">
+                                <div class="vc_pageable-slide-wrapper vc_clearfix" data-vc-grid-content="true">
+                                    @foreach (ItemsFilesEntity item in photosList)
+                                    {
+                                        <div class="vc_grid-item-x vc_clearfix vc_col-sm-4" style="margin-bottom:10px;">
+                                        <div class="vc_grid-item-x-mini vc_clearfix ">
+                                            <div class="vc_gitem-animated-block ">
+                                                <div class="vc_gitem-zone vc_gitem-zone-a @*vc_gitem-is-link*@" style="background-image: url(@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoOiginalPath)) !important;">
+                                                    @*<a href="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoOiginalPath)" title="" rel="prettyPhoto[rel--@(CurrentItem.ItemID)]" data-vc-gitem-zone="prettyphotoLink" class="vc_gitem-link prettyphoto vc-zone-link vc-prettyphoto-link"></a>*@
+                                                    <img src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoThumbPath)" class="vc_gitem-zone-img" alt="">
+                                                    <div class="vc_gitem-zone-mini"></div>
+                                                </div>
+                                            </div>
+                                        </div><div class="vc_clearfix"></div>
+                                    </div>
+                                    }
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</article>

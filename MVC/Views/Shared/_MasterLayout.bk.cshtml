@@ -1,0 +1,308 @@
+﻿@using DCCMSNameSpace;
+@{
+    // ViewBag.Title = "Home Page";
+    this.Layout = null;
+    string BodyClasses = ViewBag.BodyClasses;
+    if (string.IsNullOrEmpty(BodyClasses))
+    {
+        BodyClasses = "page page-template-default";
+    }
+}
+<!DOCTYPE html>
+<!--[if IE 8]>		  <html class="ie ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9]>		  <html class="ie ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/wp-content/themes/miracle/framework/assets/images/favicon.png" type="image/x-icon" />
+
+    @*<link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="pingback" href="http://localhost:8080/aribetationAr/xmlrpc.php">*@
+
+    <!-- CSS for IE -->
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" type="text/css" href="/wp-content/themes/miracle/framework/assets/css/ie.css" />
+    <![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="/wp-content/themes/miracle/framework/assets/js/html5.js"></script>
+        <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+
+    <title>geneva &#8211; Geneva for International Aribtation</title>
+    @*<link rel="alternate" type="application/rss+xml" title="geneva &raquo; Feed" href="http://localhost:8080/aribetationAr/?feed=rss2" />
+        <link rel="alternate" type="application/rss+xml" title="geneva &raquo; Comments Feed" href="http://localhost:8080/aribetationAr/?feed=comments-rss2" />
+        <link rel="alternate" type="application/rss+xml" title="geneva &raquo; الرئيسية Comments Feed" href="http://localhost:8080/aribetationAr/?feed=rss2&#038;page_id=2422" />*@
+    @*<script type="text/javascript">
+            window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/72x72\/", "ext": ".png", "source": { "concatemoji": "http:\/\/localhost:8080\/aribetationAr\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.4" } };
+            !function (a, b, c) { function d(a) { var c, d, e, f = b.createElement("canvas"), g = f.getContext && f.getContext("2d"), h = String.fromCharCode; return g && g.fillText ? (g.textBaseline = "top", g.font = "600 32px Arial", "flag" === a ? (g.fillText(h(55356, 56806, 55356, 56826), 0, 0), f.toDataURL().length > 3e3) : "diversity" === a ? (g.fillText(h(55356, 57221), 0, 0), c = g.getImageData(16, 16, 1, 1).data, g.fillText(h(55356, 57221, 55356, 57343), 0, 0), c = g.getImageData(16, 16, 1, 1).data, e = c[0] + "," + c[1] + "," + c[2] + "," + c[3], d !== e) : ("simple" === a ? g.fillText(h(55357, 56835), 0, 0) : g.fillText(h(55356, 57135), 0, 0), 0 !== g.getImageData(16, 16, 1, 1).data[0])) : !1 } function e(a) { var c = b.createElement("script"); c.src = a, c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c) } var f, g; c.supports = { simple: d("simple"), flag: d("flag"), unicode8: d("unicode8"), diversity: d("diversity") }, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.simple && c.supports.flag && c.supports.unicode8 && c.supports.diversity || (g = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !1)) : (a.attachEvent("onload", g), b.attachEvent("onreadystatechange", function () { "complete" === b.readyState && c.readyCallback() })), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji))) }(window, document, window._wpemojiSettings);
+        </script>
+        <style type="text/css">
+            img.wp-smiley,
+            img.emoji {
+                display: inline !important;
+                border: none !important;
+                box-shadow: none !important;
+                height: 1em !important;
+                width: 1em !important;
+                margin: 0 .07em !important;
+                vertical-align: -0.1em !important;
+                background: none !important;
+                padding: 0 !important;
+            }
+        </style>*@
+    @*<link rel='stylesheet' id='dashicons-css' href='/wp-includes/css/dashicons.min.css?ver=4.4.4' type='text/css' media='all' />*@
+    <link rel='stylesheet' id='wp-jquery-ui-dialog-css' href='/wp-includes/css/jquery-ui-dialog.min.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css' href='/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.1.5' type='text/css' media='all' />
+
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        .revolution-slider {
+            max-height: 1119px !important;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 100% !important;
+        }
+
+        .tp-caption {
+            color: #fff;
+            text-align: center;
+        }
+
+            .tp-caption .btn {
+                height: auto;
+                border-width: 1px !important;
+            }
+
+        .opacity75 {
+            opacity: .75;
+            filter: alpha(75);
+        }
+
+        .tp-leftarrow.default, .tp-rightarrow.default {
+            background: none;
+            overflow: visible;
+            -webkit-transform: none;
+            transition: all 0.35s ease;
+            -webkit-transition: all 0.35s ease;
+        }
+
+            .tp-leftarrow.default:hover, .tp-rightarrow.default:hover {
+                opacity: 1;
+                filter: alpha(100);
+            }
+
+            .tp-leftarrow.default:before {
+                position: absolute;
+                top: 10px;
+                right: 0;
+                content: "\f053";
+                display: block;
+                color: white;
+                font-size: 3em;
+                font-family: FontAwesome;
+            }
+
+            .tp-rightarrow.default:before {
+                position: absolute;
+                top: 10px;
+                left: 0;
+                content: "\f054";
+                display: block;
+                color: white;
+                font-size: 3em;
+                font-family: FontAwesome;
+            }
+
+        .tp-caption h2 {
+            font-size: 24px;
+        }
+
+        .tp-caption h4 {
+            font-size: 16px;
+        }
+
+        .tp-caption [class^="caption-"], .tp-caption [class*=" caption-"] {
+            color: #fff;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .tp-caption .caption-xl {
+            font-size: 60px;
+        }
+
+        .tp-caption .caption-md {
+            font-size: 30px;
+        }
+    </style>
+    <link rel='stylesheet' id='miracle-css-googlefonts-css' href='http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C400%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%7CPlayfair+Display%3A400%2C400italic%2C700%2C700italic%2C900%2C900italic%7COpen+Sans+Condensed%3A300%2C300italic%2C700%7CDosis%3A200%2C300%2C400%2C500%2C600%2C700%2C800&#038;subset=latin%2Clatin-ext&#038;ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-animate-css' href='/wp-content/themes/miracle/framework/assets/css/animate.min.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-fontawesome-css' href='/wp-content/themes/miracle/framework/assets/css/font-awesome.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-bootstrap-css' href='/wp-content/themes/miracle/framework/assets/css/bootstrap.min.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-popup-css' href='/wp-content/themes/miracle/framework/assets/components/magnific-popup/magnific-popup.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-owl-carousel1-css' href='/wp-content/themes/miracle/framework/assets/components/owl-carousel/owl.carousel.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-owl-carousel2-css' href='/wp-content/themes/miracle/framework/assets/components/owl-carousel/owl.transitions.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-mediaelement-css' href='/wp-content/themes/miracle/framework/assets/components/mediaelement/mediaelementplayer.min.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-skycarousel-css' href='/wp-content/themes/miracle/framework/assets/components/jquery.sky.carousel/skin-variation.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-jquerycarousel-css' href='/wp-content/themes/miracle/framework/assets/components/jquery.carousel-1.1/carousel.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='js_composer_front-css' href='/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=4.9.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-main-css' href='/wp-content/themes/miracle/framework/assets/css/style.@(Resources.Lang.LangIdentifire).min.css?ver=4.4.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-custom-css' href='/wp-content/themes/miracle/framework/assets/css/custom.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-updates-css' href='/wp-content/themes/miracle/framework/assets/css/updates.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='miracle-css-responsive-css' href='/wp-content/themes/miracle/framework/assets/css/responsive.min.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css' href='/wp-content/themes/miracle/style.css?ver=1.2.2' type='text/css' media='all' />
+    <style id='style-inline-css' type='text/css'>
+    </style>
+    <link rel='stylesheet' id='bsf-Defaults-css' href='/wp-content/uploads/smile_fonts/Defaults/Defaults.css?ver=4.4.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='redux-google-fonts-miracle_options-css' href='http://fonts.googleapis.com/css?family=Open+Sans%7CPlayfair+Display%7COpen+Sans+Condensed%7CDosis%3A600&#038;ver=1463976533' type='text/css' media='all' />
+    <script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+    <script type='text/javascript' src='/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.1.5'></script>
+    <script type='text/javascript' src='/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.1.5'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/js/jquery.noconflict.js'></script>
+
+
+    @*<link rel='https://api.w.org/' href='http://localhost:8080/aribetationAr/?rest_route=/' />*@
+    @*<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:8080/aribetationAr/xmlrpc.php?rsd" />*@
+    @*<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" />*@
+    @*<meta name="generator" content="WordPress 4.4.4" />*@
+    <link rel="canonical" href="/" />
+    <link rel='shortlink' href='/' />
+    <script type='text/javascript'>
+        jQuery(document).ready(function ($) {
+            var ult_smooth_speed = 480;
+            var ult_smooth_step = 80;
+            $('html').attr('data-ult_smooth_speed', ult_smooth_speed).attr('data-ult_smooth_step', ult_smooth_step);
+        });
+    </script>
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+    @*<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress." />
+        <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]-->
+        <meta name="generator" content="Powered by Slider Revolution 5.1.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />*@
+    @*<style type="text/css" title="dynamic-css" class="options-output">
+            body {
+                background-color: #ffffff;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            h3 {
+                font-size: 1.6667em;
+            }
+
+            h4 {
+                font-size: 1.3333em;
+            }
+
+            h5 {
+                font-size: 1.1666em;
+            }
+
+            h6 {
+                font-size: 1.0833em;
+            }
+
+            #header .logo {
+                font-family: Dosis;
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            #footer .back-to-top:before {
+                background-image: url('/wp-content/themes/miracle/framework/assets/images/icon/scroll-to-top.png');
+            }
+        </style>
+        <style type="text/css" data-type="vc_shortcodes-custom-css">
+            .vc_custom_1429854507181 {
+                background-image: url(http://www.soaptheme.net/wordpress/miracle/wp-content/uploads/2015/04/bg1.jpg?id=895) !important;
+            }
+        </style>
+        <noscript>
+        <style type="text/css">
+            .wpb_animate_when_almost_visible {
+                opacity: 1;
+            }
+        </style></noscript>*@
+    <style id="miracle-generated-css-output" type="text/css"></style>
+</head>
+<body class="@(BodyClasses) @((ViewBag.BodyModuleClass!=null)?(string)ViewBag.BodyModuleClass:"") wpb-js-composer js-comp-ver-4.9.1 vc_responsive">
+    <div id="page-wrapper">
+        @Html.Partial("~/Views/Shared/Partials/Menu.cshtml")
+
+        
+                        @RenderBody()
+
+        <footer id="footer" class="style3">
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="row">
+                        <nav class="secondary-menu col-md-6">
+                            <ul id="menu-headermenu" class="nav nav-pills">
+                                <li id="menu-item-2103" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2103"><a href="/">@(Resources.SiteText.MenuHome)</a></li>
+                                <li id="menu-item-3025" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2521 current_page_item menu-item-3025"><a href="/StaticContents/About">@(Resources.SiteText.MenuAboutTitle)</a></li>
+                                <li id="menu-item-3026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3026"><a href="/StaticContents/Trustees">@(Resources.SiteText.MenuTruetees)</a></li>
+                                <li id="menu-item-3024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3024"><a href="/Module/Services/">@(Resources.SiteText.MenuServices)</a></li>
+                                <li id="menu-item-3027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3027"><a href="/module/contactus">@(Resources.SiteText.MenuContactUs)</a></li>
+                            </ul>
+                        </nav>						<div class="social-icons col-md-6"><a href="https://www.facebook.com/Geneva.center/" class="social-icon" target="_blank"><i class="fa fa-facebook has-circle"></i></a><a href="https://twitter.com/genevaarbitrate?lang=ar" class="social-icon" target="_blank"><i class="fa fa-twitter has-circle"></i></a><a href="https://www.youtube.com/user/genevaaforinternatio" class="social-icon" target="_blank"><i class="fa fa-youtube has-circle"></i></a></div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+        <div class="copyright-area"><div class="copyright">&copy; 2016 Geneva for International Arbitration by <a href="http://www.digitaltags.net/">Digital Tags</a></div></div>
+    </div> <!-- end page wrapper -->
+    <script type='text/javascript' src='/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/ui/dialog.min.js?ver=1.11.4'></script>
+    <script type='text/javascript' src='/wp-includes/js/wpdialog.min.js?ver=4.4.4'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/js/modernizr.2.8.3.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/js/jquery-migrate-1.2.1.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/js/jquery-ui.1.10.4.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/js/jquery.plugins.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/components/magnific-popup/jquery.magnific-popup.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/components/owl-carousel/owl.carousel.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/components/carouFredSel-6.2.1/jquery.carouFredSel-6.2.1.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/js/jquery.stellar.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/js/waypoints.min.js'></script>
+    <script type='text/javascript' src='http://f.vimeocdn.com/js/froogaloop2.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/components/mediaelement/mediaelement-and-player.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/components/jquery.sky.carousel/jquery.sky.carousel-1.0.2.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/components/jquery.carousel-1.1/jquery.mousewheel.min.js'></script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/components/jquery.carousel-1.1/jquery.carousel-1.1.min.js'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var miracleLocal = { "postID": "2422", "ajaxurl": "http:\/\/localhost:8080\/aribetationAr\/wp-admin\/admin-ajax.php", "ajaxNonce": "58ae15e825" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='/wp-content/themes/miracle/framework/assets/js/main.js'></script>
+    <script type='text/javascript' src='/wp-content/plugins/Ultimate_VC_Addons/assets/min-js/SmoothScroll.min.js?ver=3.15.0'></script>
+    <script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.4.4'></script>
+    <script type='text/javascript' src='/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.9.1'></script>
+    <script>                                    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model AppService.FrontItemsModel
+@{
+    ViewBag.Title = "View1";
+    AppService.FrontItemsModel CurrentItem = Model;
+    ViewBag.BodyClasses = "single single-post postid-"+CurrentItem.ItemID+" single-format-standard";
+    ViewBag.PageTitle = CurrentItem.Title;
+    
+}
+<article id="post-@(CurrentItem.ItemID)" class="box-lg post-@(CurrentItem.ItemID) post type-post status-publish format-standard has-post-thumbnail hentry category-training-programs tag-mobile tag-new-sliders">
+    <div class="post-date">
+        <span class="day">20</span>
+        <span class="month uppercase">May</span>
+    </div>
+
+
+    <div class="image-container"><img width="1600" height="1164" src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + CurrentItem.PhotoPathOriginal)" class="attachment-full size-full wp-post-image" alt="lawyer-1" srcset="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + CurrentItem.PhotoPathOriginal)" sizes="(max-width: 1600px) 100vw, 1600px" /></div>
+    ><div class="post-content">
+
+        <div class="vc_row wpb_row row block">
+            <div class="col-sm-12 wpb_column ">
+                <div class="wpb_wrapper">
+
+                    <div class="wpb_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                            @Html.Raw(CurrentItem.Description)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="vc_row wpb_row row">
+            <div class="col-sm-12 wpb_column ">
+                <div class="wpb_wrapper">
+
+                    <div class="wpb_text_column wpb_content_element ">
+                        <div class="wpb_wrapper">
+                            <div class="heading-box"><h2 class="box-title"@Resources.SiteText.ContactFormLeaveYourMessage</h2><p class="desc-lg">@*يسعدنا دوما استقبال رسالئك*@</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="vc_row wpb_row row">
+            <div class="col-sm-2 wpb_column ">
+                <div class="wpb_wrapper">
+
+                </div>
+            </div>
+
+            <div class="col-sm-8 wpb_column ">
+                <div class="wpb_wrapper">
+
+                    <div class="wpb_text_column wpb_content_element ">
+                        @Html.Partial("~/Views/_Forms/ContactUs.cshtml")
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2 wpb_column ">
+                <div class="wpb_wrapper">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</article>
+
+<article id="post-2652" class="box-lg post-2652 post type-post status-publish format-standard has-post-thumbnail hentry category-branches">
+
+    <div class="image-container"><img width="550" height="330" src="http://arbitrationar.genevahumanrights.org/Content/images/DesignImages/de.png" class="attachment-full size-full wp-post-image" alt="de" srcset="http://arbitrationar.genevahumanrights.org/Content/images/DesignImages/de-300x180.png 300w, http://arbitrationar.genevahumanrights.org/Content/images/DesignImages/de-480x288.png 480w, http://arbitrationar.genevahumanrights.org/Content/images/DesignImages/de.png 550w" sizes="(max-width: 550px) 100vw, 550px" /></div>
+    
+
+
+
+    <!-- If comments are closed. -->
+    <p class="no-comments">Comments are closed.</p>
+
+
+
+
+
+
+
+</article>

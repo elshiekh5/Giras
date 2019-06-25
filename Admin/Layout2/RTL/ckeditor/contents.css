@@ -1,0 +1,151 @@
+@import url("http://localhost:4445/wp-content/themes/miracle/framework/assets/css/ie.css");
+@import url('http://localhost:4445/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.1.5');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2C400%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%7CPlayfair+Display%3A400%2C400italic%2C700%2C700italic%2C900%2C900italic%7COpen+Sans+Condensed%3A300%2C300italic%2C700%7CDosis%3A200%2C300%2C400%2C500%2C600%2C700%2C800&#038;subset=latin%2Clatin-ext&#038;ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/css/animate.min.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/css/font-awesome.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/css/bootstrap.min.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/components/magnific-popup/magnific-popup.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/components/owl-carousel/owl.carousel.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/components/owl-carousel/owl.transitions.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/components/mediaelement/mediaelementplayer.min.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/components/jquery.sky.carousel/skin-variation.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/components/jquery.carousel-1.1/carousel.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=4.9.1');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/css/style.min.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/css/custom.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/css/updates.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/framework/assets/css/responsive.min.css?ver=4.4.4');
+@import url('http://localhost:4445/wp-content/themes/miracle/style.css?ver=1.2.2');
+@import url('http://localhost:4445/wp-content/uploads/smile_fonts/Defaults/Defaults.css?ver=4.4.4');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans%7CPlayfair+Display%7COpen+Sans+Condensed%7CDosis%3A600&#038;ver=1463976533');
+/*
+
+body
+{
+
+	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
+	font-size: 12px;
+
+
+	color: #333;
+
+
+	background-color: #fff;
+
+	margin: 20px;
+}
+
+.cke_editable
+{
+	font-size: 13px;
+	line-height: 1.6;
+}
+
+blockquote
+{
+	font-style: italic;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	padding: 2px 0;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0;
+}
+
+.cke_contents_ltr blockquote
+{
+	padding-left: 20px;
+	padding-right: 8px;
+	border-left-width: 5px;
+}
+
+.cke_contents_rtl blockquote
+{
+	padding-left: 8px;
+	padding-right: 20px;
+	border-right-width: 5px;
+}
+
+a
+{
+	color: #0782C1;
+}
+
+ol,ul,dl
+{
+
+	*margin-right: 0px;
+	
+	padding: 0 40px;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+hr
+{
+	border: 0px;
+	border-top: 1px solid #ccc;
+}
+
+img.right
+{
+	border: 1px solid #ccc;
+	float: right;
+	margin-left: 15px;
+	padding: 5px;
+}
+
+img.left
+{
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 15px;
+	padding: 5px;
+}
+
+pre
+{
+	white-space: pre-wrap; 
+	word-wrap: break-word; 
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
+.marker
+{
+	background-color: Yellow;
+}
+
+span[lang]
+{
+	font-style: italic;
+}
+
+figure
+{
+	text-align: center;
+	border: solid 1px #ccc;
+	border-radius: 2px;
+	background: rgba(0,0,0,0.05);
+	padding: 10px;
+	margin: 10px 20px;
+	display: inline-block;
+}
+
+figure > figcaption
+{
+	text-align: center;
+	display: block; 
+}
+
+a > img {
+	padding: 1px;
+	margin: 1px;
+	border: none;
+	outline: 1px solid #0782C1;
+}
+
+*/

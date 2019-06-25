@@ -1,0 +1,51 @@
+﻿@model MVC.ViewModels.HomeViewModel
+
+@{
+    this.Layout = "~/Views/Shared/_LayoutArticles.cshtml";
+
+
+}
+
+
+<div class="inners">
+    <h2 class="inner-tittel">المناسبات</h2>
+
+    @if (Model.LatestOccasions != null && Model.LatestOccasions.Count > 0)
+    {
+        <div class="owl_events">
+    @foreach (var item in Model.LatestOccasions)
+    {
+        <div class="item">
+
+            <div class="events-content-main">
+                <!-- bg section -->
+                <div class="bg-events-box">
+                    <div class="bg-events-ring"><a href="/Occasions/page/@item.ItemID/">@item.ItemDate.Value.ToString("d-M yyyy")</a> </div>
+                    <p>@item.ShortDescription</p>
+                    <h2>@item.Title</h2>
+                </div>
+                <!-- fg section -->
+                <div class="fg-right-hover">
+                    <div class="fg-events-ring"> <a href="#">@item.ItemDate.Value.ToString("d-M")</a></div>
+                    <ul>
+                        <li>@item.ShortDescription</li>
+                    </ul>
+                    @*<h2>@item.Title</h2>*@
+                    <div class="events-btn"><div class="fg-btn-hover"><a href="/Occasions/page/@item.ItemID/">شاهد المزيد</a></div><a href="/Occasions/page/@item.ItemID/">شاهد المزيد</a></div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+        </div>
+
+    }
+</div>
+
+
+
+
+
+
+

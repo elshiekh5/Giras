@@ -1,0 +1,15 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+
+@{
+    this.Layout = "~/Views/Shared/_LayoutArticles.cshtml";
+    FrontItemsModel currentItem = FrontItemsController.GetItemObject(this.ViewBag.PageID, SiteSettings.GetCurrentLanguage());
+    ViewBag.PageTitle = currentItem.Title;
+
+}
+<div class="inners">
+    <h2 class="inner-tittel">@Html.Raw(currentItem.Title)</h2>
+    <p>
+        @Html.Raw(currentItem.Description)
+    </p>
+</div>

@@ -1,0 +1,55 @@
+
+/*============================================================================================
+								gradient styles
+==============================================================================================*/
+
+.main-ovl-bg-slide-1
+{
+background: -o-linear-gradient(left bottom, rgba(0,0,0,0.7) 30%, rgba(0,179,240,0.7) 100%, #1B1B1B 100%);
+background: -moz-linear-gradient(left bottom, rgba(0,0,0,0.7) 30%, rgba(0,179,240,0.7) 100%, #1B1B1B 100%);
+background: -webkit-linear-gradient(left bottom, rgba(0,0,0,0.7) 30%, rgba(0,179,240,0.7) 100%, #1B1B1B 100%);
+background: -ms-linear-gradient(left bottom, rgba(0,0,0,0.7) 30%, rgba(0,179,240,0.7) 100%, #1B1B1B 100%);
+background: linear-gradient(to left bottom, rgba(0,0,0,0.7) 30%, rgba(0,179,240,0.7) 100%, #1B1B1B 100%);
+}
+.main-ovl-bg-slide-2
+{
+background-image: -o-linear-gradient(left bottom, rgba(23,23,23,0.5) 30%, rgba(216,62,170,0.5) 100%, #1B1B1B 100%);
+background-image: -moz-linear-gradient(left bottom, rgba(23,23,23,0.5) 30%, rgba(216,62,170,0.5) 100%, #1B1B1B 100%);
+background-image: -webkit-linear-gradient(left bottom, rgba(23,23,23,0.5) 30%, rgba(216,62,170,0.5) 100%, #1B1B1B 100%);
+background-image: -ms-linear-gradient(left bottom, rgba(23,23,23,0.5) 30%, rgba(216,62,170,0.5) 100%, #1B1B1B 100%);
+background-image: linear-gradient(to left bottom, rgba(23,23,23,0.5) 30%, rgba(216,62,170,0.5) 100%, #1B1B1B 100%)
+}
+
+.main-ovl-bg-slide-3
+{
+background-image: -o-linear-gradient(left bottom, rgba(0,0,0,0.5) 30%, rgba(252,232,0,0.5)  100%, #1B1B1B 100%);
+background-image: -moz-linear-gradient(left bottom, rgba(0,0,0,0.5) 30%, rgba(252,232,0,0.5) 100%, #1B1B1B 100%);
+background-image: -webkit-linear-gradient(left bottom, rgba(0,0,0,0.5) 30%, rgba(252,232,0,0.5) 100%, #1B1B1B 100%);
+background-image: -ms-linear-gradient(left bottom, rgba(0,0,0,0.5) 30%, rgba(252,232,0,0.5) 100%, #1B1B1B 100%);
+background-image: linear-gradient(to left bottom, rgba(0,0,0,0.5) 30%, rgba(252,232,0,0.5) 100%, #1B1B1B 100%);
+}
+
+
+/*=============================================================================================
+                                  colored overlays
+===============================================================================================*/
+
+
+/*----------------------parent parallax section------------------------------------*/
+#bottle>div:nth-of-type(2){
+    background: rgba(144,249,109,0.4);  
+}
+/*--------------------------parallax additional (price) section-----------------------------*/
+#price-bg-main>div:nth-of-type(2){
+   background: rgba(144,249,109,0.4);   
+}
+/*----------------------------parallax additional (figure) section---------------------------*/
+#fig-bg-main>div:nth-of-type(3){
+  background: rgba(144,249,109,0.4);     
+  opacity: 0.7;
+}
+/*--------------------------parallax additional (social) section----------------------------*/
+#social-bg-main>div:nth-of-type(2)
+{
+   background: rgba(144,249,109,0.4);   
+}

@@ -1,0 +1,44 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    ItemsModulesOptions currentModule = ViewBag.CurrentModule;
+    List<AppService.FrontItemsModel> itemList = AppService.FrontItemsController.GetModuleData(currentModule.ModuleTypeID, "YouTube");
+}
+
+<div class="vc_row wpb_row row">
+    @if (itemList != null)
+    {
+        foreach (var item in itemList)
+        {
+            <div class="col-sm-4 wpb_column ">
+        <div class="wpb_wrapper">
+
+            <div class="wpb_video_widget wpb_content_element">
+                <div class="wpb_wrapper">
+
+                    <div class="wpb_video_wrapper"><iframe width="1170" height="658" src="https://www.youtube.com/embed/@(item.YoutubeCode)?feature=oembed" frameborder="0" allowfullscreen></iframe></div>
+                </div>
+            </div>
+
+            <div class="wpb_text_column wpb_content_element ">
+                <div class="wpb_wrapper">
+
+                    <div class="box-content">
+                        <h4 class="box-title" style="text-align: center;">@item.Title</h4>
+                        <p>@item.ShortDescription</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        }
+
+    }
+    
+
+    
+
+    
+</div>
+

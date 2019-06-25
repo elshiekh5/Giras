@@ -1,0 +1,60 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    ItemsModulesOptions currentModule = ViewBag.CurrentModule;
+    List<AppService.FrontItemsModel> itemList = AppService.FrontItemsController.GetModuleData(currentModule.ModuleTypeID, "Services");
+}
+
+
+
+<div class="iso-container iso-col-3 style-masonry has-column-width blog-posts">
+    
+    
+
+    @if (itemList != null)
+{
+    foreach (var item in itemList)
+    {
+        <div class="iso-item">
+
+            <article class="post post-masonry post-3008 type-post status-publish format-standard has-post-thumbnail hentry category-branches">
+
+
+                <div class="post-image ">
+                    <div class="image hover-style3" >
+                        <img src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)"
+                             class=" attachment-gallery_medium size-gallery_medium wp-post-image"
+                             alt="@item.Title" />
+                        <div class="image-extras">
+                            <a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)" class="post-gallery"></a>
+                        </div>
+                    </div></div>	<div class="post-content no-author-img ">
+                    @*<div class="post-meta"><span class="entry-author fn">By <a href="http://arbitrationar.genevahumanrights.org/index.php/author/admin/">admin</a></span><span class="entry-time"><span class="published">22 May 2016</span></span><span class="post-category">in <a href="http://arbitrationar.genevahumanrights.org/index.php/category/branches/">فروعنا</a></span></div>*@
+                <h3 class="entry-title"><a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)">@item.Title</a></h3><p></p>
+                </div>
+
+                <div class="post-action">
+                    @*<a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)#comments" class="btn btn-sm style3 post-comment"><i class="fa fa-comment"></i>0</a>*@
+                    @*<div id="wp-ulike-3008" class="wpulike default"><div class="counter"><a data-ulike-id="3008" data-ulike-type="likeThis" data-ulike-status="3" class="wp_ulike_btn image"></a>
+                        <span class="count-box">0</span></div></div>*@
+                    @*<span class="post-share">
+                    <a href="javascript:void(0)" class="btn btn-sm style3"><i class="fa fa-share"></i>Share</a><span class="share-links"><a href="http://www.facebook.com/sharer.php?s=100&#038;p%5Burl%5D=@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)&#038;p%5Btitle%5D=@(item.Title)&#038;p%5Bimages%5D%5B0%5D=@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)&#038;t=@(item.Title)&#038;u=@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)" class="facebook" target="_blank" title="Facebook" data-toggle="tooltip" data-placement="right"><i class="fa fa-facebook"></i></a>
+                        <a href="http://twitter.com/home?status=@(item.Title)+http%3A%2F%2Farbitrationar.genevahumanrights.org%2Findex.php%2F2016%2F05%2F22%2Firaq-branche%2F" class="twitter" target="_blank" title="Twitter" data-toggle="tooltip" data-placement="right"><i class="fa fa-twitter"></i></a>
+                        </span></span>*@
+                    
+                    <a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule,item.ItemID)" class="btn btn-sm style3 post-read-more">@Resources.SiteText.More</a>
+                </div>
+            </article>
+
+        </div>
+    }
+
+}
+
+
+    
+    
+    
+
+</div>
+

@@ -1,0 +1,77 @@
+﻿@model MVC.ViewModels.HomeViewModel
+
+@{
+    this.Layout = "~/Views/Shared/_LayoutWide.cshtml";
+
+  
+}
+
+<!-- ======================= Inner section =========================== -->
+<section ID="inner">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="inners">
+                    <h2 class="inner-tittel">مكتبة غراس</h2>
+                    <div class="tab-wrap">
+                        <div class="media">
+                            <div class="parrent pull-left">
+                                <ul class="nav nav-tabs nav-stacked">
+                                    <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01"><i class="fa fa-headphones"></i> صوتيات</a></li>
+                                    <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02"><i class="fa fa-video-camera"></i> فيديوهات</a></li>
+                                    <li class=""><a href="#tab3" data-toggle="tab" class="tehnical"><i class="fa fa-file-pdf-o"></i> كتب PDF</a></li>
+                                    @*<li class=""><a href="#tab4" data-toggle="tab" class="tehnical"><i class="fa fa-th-large"></i> تصنيفات أخرى</a></li>
+                                    <li class=""><a href="#tab5" data-toggle="tab" class="tehnical"><i class="fa fa-th-large"></i> تصنيفات أخرى</a></li>*@
+                                </ul>
+                            </div>
+
+                            <div class="parrent media-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade" id="tab1">
+                                        @foreach (var item in Model.LatestSoundTracks)
+                                        {
+                                            <div class="library col-md-3 col-xs-6">
+                                                <img src="~/Content/images/audio.jpg" alt="" />
+                                                
+                                                <h3><a href="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl)/Content/UpFiles/_Site/ItemCategories/0/Items/@(item.ItemID)/Files/Items_@(item.ItemID)@(item.AudioExtension)" class="html5lightbox" data-width=800 data-height=400 title="">@item.Title</a></h3>
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="tab-pane fade active in" id="tab2">
+                                        @foreach (var item in Model.LatestVideos)
+                                        {
+                                            <div class="library col-md-3 col-xs-6">
+                                                <img src="~/Content/images/video.jpg" alt="" />
+                                                <h3><a href="https://www.youtube.com/embed/@(item.YoutubeCode)" class="html5lightbox" data-width=800 data-height=400 title="">@item.Title</a></h3>
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="tab-pane fade" id="tab3">
+                                        @foreach (var item in Model.LatestBooks)
+                                        {
+
+                                            <div class="library col-md-3 col-xs-6">
+                                                <img src="~/Content/images/book.jpg" alt="" />
+                                                <h3><a href="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl)/Content/UpFiles/_Site/ItemCategories/0/Items/@(item.ItemID)/Files/Items_@(item.ItemID)@(item.FileExtension)">@item.Title</a></h3>
+                                            </div>
+                                        }
+                                    </div>
+
+                                </div> <!--/.tab-content-->
+                            </div> <!--/.media-body-->
+                        </div> <!--/.media-->
+                    </div><!--/.tab-wrap-->
+
+                </div>
+            </div>
+
+
+        </div><!-- row -->
+    </div><!-- container -->
+</section><!-- section -->
+<!-- ======================= End Inner section =========================== -->
+
+

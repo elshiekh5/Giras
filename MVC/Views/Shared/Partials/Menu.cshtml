@@ -1,0 +1,144 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    ItemsModulesOptions branchesModule = ItemsModulesOptions.GetType(31);
+    List<AppService.FrontItemsModel> branchesList = AppService.FrontItemsController.GetModuleData(31, "Services");
+}
+<header id="header" style="color: #000000">
+    <div class="container">
+        <div class="header-inner">
+            <div class="branding">
+                <h1 class="logo">
+                    <a href="/" title="@(Resources.SiteText.SiteTitle)" style="color: #000000">
+                        <img src="/Content/images/DesignImages/logo-ar.png" alt="geneva">
+                    </a>
+                </h1>
+            </div>
+            <nav id="nav" role="navigation">
+                <ul class="header-top-nav">
+                    <li class="mini-search">
+                        <a href="#"><i class="fa fa-search has-circle"></i></a>
+                        <div class="main-nav-search-form">
+                            <form method="get" role="search" action="/Search/Index">
+                                <div class=" search-box">
+                                    <input type="text" id="s" name="s" value="">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="visible-mobile">
+                        <a href="#mobile-nav-wrapper" data-toggle="collapse"><i class="fa fa-bars has-circle"></i></a>
+                    </li>
+                </ul>
+                <ul id="menu-aribitationmainmenu" class="hidden-mobile">
+                    <li id="menu-item-2426" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/">@(Resources.SiteText.MenuHome)</a></li>
+                    <li id="menu-item-2635" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children">
+                        <a href="#">@(Resources.SiteText.MenuAboutTitle)</a>
+                        <ul class="sub-nav">
+                            <li id="menu-item-2621" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2521 current_page_item"><a href="/StaticContents/About">@Resources.SiteText.MenuAbout1</a></li>
+                            <li id="menu-item-3011" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/StaticContents/GenevaClup/">@Resources.SiteText.MenuAbout2</a></li>
+                            <li id="menu-item-2623" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/StaticContents/TeamWork/">@Resources.SiteText.MenuAbout3</a></li>
+                            <li id="menu-item-2638" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="@(SiteSettings.Site_AdminUrl)/WebSite/DownloadAttach.aspx?id=11">@Resources.SiteText.MenuAbout4</a></li>
+                            <li id="menu-item-2639" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="@(SiteSettings.Site_AdminUrl)/WebSite/DownloadAttach.aspx?id=6">@Resources.SiteText.MenuAbout5</a></li>
+                            <li id="menu-item-2640" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="@(SiteSettings.Site_AdminUrl)/WebSite/DownloadAttach.aspx?id=12">@Resources.SiteText.MenuAbout6</a></li>
+                            <li id="menu-item-2641" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="@(SiteSettings.Site_AdminUrl)/WebSite/DownloadAttach.aspx?id=21">@Resources.SiteText.MenuAbout7</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-2622" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                        <a href="/Module/Services/">@(Resources.SiteText.MenuServices)</a>
+                        <ul class="sub-nav">
+                            <li id="menu-item-3014" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/Module/Services/">@(Resources.SiteText.MenuServices)</a></li>
+                            <li id="menu-item-3015" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children">
+                                <a href="/Module/Branches/">@(Resources.SiteText.MenuBraches)</a>
+                                <ul class="sub-nav">
+                                    @foreach (var item in branchesList)
+                                    {
+                                        <li id="menu-item-@(item.ItemID)" class="menu-item menu-item-type-post_type menu-item-object-post"><a href="@SiteUrlsManager.GetSinglesPageLink(branchesModule, item.ItemID)">@item.Title</a></li>
+
+                                    }
+                                </ul>
+                            </li>
+                            <li id="menu-item-3014" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/search/">@(Resources.SiteText.Advisers)</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li id="menu-item-2624" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/StaticContents/Trustees">@(Resources.SiteText.MenuTruetees)</a></li>
+                    <li id="menu-item-2642" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                        <a href="#">@(Resources.SiteText.MenuTainingTitle)</a>
+                        <ul class="sub-nav">
+                            <li id="menu-item-2644" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/Module/Training/">@(Resources.SiteText.MenuTraining)</a></li>
+                            <li id="menu-item-2645" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/Module/Studies/">@(Resources.SiteText.MenuStudies)</a></li>
+                            <li id="menu-item-2643" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/Module/NewsAndConferances/">@(Resources.SiteText.MenuConferences)</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-2899" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                        <a href="#">@(Resources.SiteText.MenuMultimedia)</a>
+                        <ul class="sub-nav">
+                            <li id="menu-item-2903" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/Module/Gallery/">@(Resources.SiteText.MenuGallery)</a></li>
+                            <li id="menu-item-2902" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/Module/Video/">@(Resources.SiteText.MenuVideos)</a></li>
+                            <li id="menu-item-2923" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/Module/Books/">@(Resources.SiteText.MenuBooks)</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-3012" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/module/contactus">@(Resources.SiteText.MenuContactUs)</a></li>
+                    <li id="menu-item-3012" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="otherlang" href="/home/Language/@Resources.Lang.OtherLangIdentifire">@(Resources.Lang.OtherLangTitle)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="mobile-nav-wrapper collapse visible-mobile" id="mobile-nav-wrapper">
+        <ul id="menu-aribitationmainmenu-1" class="mobile-nav">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/">@(Resources.SiteText.MenuHome)</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children">
+                <span class="open-subnav"></span><a href="#">@(Resources.SiteText.MenuAboutTitle)</a>
+                <ul class="sub-nav">
+
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2521 current_page_item"><a href="/StaticContents/About">@Resources.SiteText.MenuAbout1</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/StaticContents/GenevaClup/">@Resources.SiteText.MenuAbout2</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/StaticContents/TeamWork/">@Resources.SiteText.MenuAbout3</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="@(SiteSettings.Site_AdminUrl)/WebSite/DownloadAttach.aspx?id=11">@Resources.SiteText.MenuAbout4</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="@(SiteSettings.Site_AdminUrl)/WebSite/DownloadAttach.aspx?id=6">@Resources.SiteText.MenuAbout5</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="@(SiteSettings.Site_AdminUrl)/WebSite/DownloadAttach.aspx?id=12">@Resources.SiteText.MenuAbout6</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="@(SiteSettings.Site_AdminUrl)/WebSite/DownloadAttach.aspx?id=21">@Resources.SiteText.MenuAbout7</a></li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                <span class="open-subnav"></span><a href="/Module/Services/">@(Resources.SiteText.MenuServices)</a>
+                <ul class="sub-nav">
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/Module/Services/">@(Resources.SiteText.MenuServices)</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children">
+                        <span class="open-subnav"></span><a href="http://arbitrationar.genevahumanrights.org/index.php/category/branches/">@(Resources.SiteText.MenuBraches)</a>
+                        <ul class="sub-nav">
+                            @foreach (var item in branchesList)
+                            {
+                                <li id="menu-item-@(item.ItemID)" class="menu-item menu-item-type-post_type menu-item-object-post"><a href="@SiteUrlsManager.GetSinglesPageLink(branchesModule, item.ItemID)">@item.Title</a></li>
+
+                            }
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/search/">@(Resources.SiteText.Advisers)</a></li>
+                    
+                </ul>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/StaticContents/Trustees">@(Resources.SiteText.MenuTruetees)</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <span class="open-subnav"></span><a href="#">@(Resources.SiteText.MenuTainingTitle)</a>
+                <ul class="sub-nav">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/module/Training/">@(Resources.SiteText.MenuTraining)</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/module/Studies/">@(Resources.SiteText.MenuStudies)</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/Module/NewsAndConferances/">@(Resources.SiteText.MenuConferences)</a></li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <span class="open-subnav"></span><a href="#">@(Resources.SiteText.MenuMultimedia)</a>
+                <ul class="sub-nav">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/Module/Gallery/">@(Resources.SiteText.MenuGallery)</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/Module/Video/">@(Resources.SiteText.MenuVideos)</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/Module/Books/">@(Resources.SiteText.MenuBooks)</a></li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/module/contactus">@(Resources.SiteText.MenuContactUs)</a></li>
+        </ul>
+    </div>
+</header>

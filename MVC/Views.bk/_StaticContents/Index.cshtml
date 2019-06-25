@@ -1,0 +1,9 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+
+@{
+    FrontItemsModel currentItem = FrontItemsController.GetItemObject(this.ViewBag.PageID, SiteSettings.GetCurrentLanguage());
+    ViewBag.PageTitle = currentItem.Title;
+
+}
+@Html.Raw(currentItem.Description)

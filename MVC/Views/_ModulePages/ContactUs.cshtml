@@ -1,0 +1,17 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+
+@{
+    ViewBag.Title = "ContactUs";
+    FrontItemsModel contacts = FrontItemsController.GetItemObject(5, SiteSettings.GetCurrentLanguage());
+}
+
+<div class="vc_row wpb_row row">
+    <div class="col-sm-8 wpb_column  box">
+       @Html.Partial("~/Views/_Forms/ContactUs.cshtml")
+    </div>
+
+    <div class="col-sm-4 wpb_column  box">
+        @Html.Raw(contacts.Description)
+    </div>
+</div>

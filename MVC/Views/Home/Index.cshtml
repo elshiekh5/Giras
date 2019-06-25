@@ -1,0 +1,620 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@model MVC.ViewModels.HomeViewModel
+@{
+    this.Layout = "~/Views/Shared/_MasterLayout.cshtml";
+    ViewBag.BodyClasses = "home page page-id-1 page-template page-template-template-home page-template-template-home-php";
+
+    ItemsModulesOptions branchesModule = ItemsModulesOptions.GetType(31);
+
+
+    //List<AppService.FrontItemsModel> list01 = AppService.FrontItemsController.GetLatestDataInSpecificCategory(13, 1021, "GirasCategoriesTopTitlePhoto", 4);
+    //List<AppService.FrontItemsModel> list02 = AppService.FrontItemsController.GetLatestDataInSpecificCategory(13, 1021, "GirasCategoriesTopTitlePhotoShortDescription", 4);
+
+    ViewBag.IsHomePage = true;
+
+
+}
+
+
+
+        <!--========================================================================================
+                                           highlight section started
+        =============================================================================================-->
+        <section id="highlight" class="page-section-main highlight-main-section">
+            <div class="container">
+                <div class="row pad-top-150 pad-bottom-150">
+
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 animated" data-fx="fadeInUp">
+                        <!-- ///////1st row hi/////////// -->
+                        <div class="row ">
+                            <!-- left box -->
+                            <div class="col-md-6 col-sm-6">
+
+                                <div class="hi-left-main">
+                                    <div class="hi-left-main-box">
+                                        <article class="hi-left-content">
+                                            <h4>تعرف على غراس</h4>
+                                            <P>نسعي لبناء الشعور بالأمان والطمأنينة والطمأنينة لدى الطفل للتعلم والتميز بالأخلاق والفكر والعقيدة والصلاح والاستقامة <a href="#">المزيد ...</a></P>
+                                        </article>
+                                        <div class="hi-left-icon-ring">
+                                            <img src="~/Content/images/highlight/01.png" class="img-responsive" alt="hi">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- right box -->
+                            <div class="col-md-6 col-sm-6">
+
+                                <div class="hi-right-main">
+                                    <div class="hi-right-main-box">
+                                        <article class="hi-right-content">
+                                            <h4>مقالات وأبحاث</h4>
+                                            <P>نسعي لبناء الشعور بالأمان والطمأنينة والطمأنينة لدى الطفل للتعلم والتميز بالأخلاق والفكر والعقيدة والصلاح والاستقامة <a href="#">المزيد ...</a></P>
+                                        </article>
+                                        <div class="hi-right-icon-ring">
+                                            <img src="~/Content/images/highlight/02.png" class="img-responsive" alt="hi">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--///////// 2nd row started ////////-->
+                        <div class="row">
+                            <!-- left box -->
+                            <div class="col-md-6 col-sm-6 hi-second-row">
+
+                                <div class="hi-left-down-main">
+                                    <div class="hi-left-down-main-box">
+                                        <article class="hi-left-down-content">
+                                            <h4>ركن عالم الأم</h4>
+                                            <P>نسعي لبناء الشعور بالأمان والطمأنينة والطمأنينة لدى الطفل للتعلم والتميز بالأخلاق والفكر والعقيدة والصلاح والاستقامة <a href="#">المزيد ...</a></P>
+                                        </article>
+                                        <div class="hi-left-down-icon-ring">
+                                            <img src="~/Content/images/highlight/03.png" class="img-responsive" alt="hi">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- right box -->
+                            <div class="col-md-6 col-sm-6 hi-second-row">
+
+                                <div class="hi-right-down-main">
+                                    <div class="hi-right-down-main-box">
+                                        <article class="hi-right-down-content">
+                                            <h4>الركن الطبي</h4>
+                                            <P>نسعي لبناء الشعور بالأمان والطمأنينة والطمأنينة لدى الطفل للتعلم والتميز بالأخلاق والفكر والعقيدة والصلاح والاستقامة <a href="#">المزيد ...</a></P>
+                                        </article>
+                                        <div class="hi-right-down-icon-ring">
+                                            <img src="~/Content/images/highlight/04.png" class="img-responsive" alt="hi">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-1"></div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ================================================================================
+                                multilayer parallax section
+             ================================================================================ -->
+        @{
+
+
+
+        }
+
+
+        <section ID="mlt-parallax" class="clear">
+            <div class="parallax-main">
+                <div id="bottle">
+                    <div class="parallax resp-fix" data-velocity="-.3" data-fit="200" data-mypos="100%"></div>
+                    <div class="parallax" data-velocity="-.5" data-mypos="100%"></div>
+
+
+                    <div class="container subjects animated" data-fx="fadeInUp">
+                        <div class="col-md-8 pull-right">
+                            <div class="grid">
+                        @foreach (var item in Model.LatestArticles)
+                        {
+                        <figure class="effect-lexi">
+                            <img src="~/Content/images/img1.jpg" alt="img12" />
+                            <figcaption>
+                                <h2>@item.Title</h2>
+                                <p>لمشاهدة التفاصيل اضغط هنا...</p>
+                                <a href="/Articles/page/@item.ItemID">View more</a>
+                            </figcaption>
+                        </figure>
+                        }
+
+                            </div>
+                            <div style="clear:both;"></div>
+                            <a class="more" href="#">شاهد المزيد <i class="fa fa-angle-double-left"></i></a>
+                        </div>
+                    </div>
+
+                    <article class="mlt-text-main animated" data-fx="fadeInUp">
+                        <div class="mlt-img-main"><img src="~/Content/images/icon/layer.png" alt="layer"></div>
+                        <div class="mlt-head-text"> <h1>مساحات <span>اعلانية</span></h1> </div>
+                        <img class="ads" src="~/Content/images/ads.jpg" alt="">
+                        <p>التربية فن وعلم ومهارة ليست موروث تربوي خاطئ ولا ردات أفعال سريعة ولا اجتهادات فردية تحتمل الصواب والخطأ إنما هي علم نتعلمه ومهارة نتدرب عليها .</p>
+                        <!-- section btn -->
+                        <div class="mlt-btn-min">
+                            <!-- btn 1 -->
+
+                            <a href="#">
+                                <div class="mlt-btn">
+                                    <div class="mlt-btn-left"></div>
+                                    <div class="mlt-btn-center"> <span>المزيد</span></div>
+                                </div>
+                            </a>
+
+                            <!-- btn 2 -->
+                            <a href="#">
+                                <div class="mlt-btn">
+                                    <div class="mlt-btn-left"></div>
+                                    <div class="mlt-btn-center"> <span>اشترك</span></div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+
+
+        </section>
+        <!-- ======================================================================================
+                                           service section started
+             ====================================================================================== -->
+        <section id="service" class="page-section-main">
+            <div class="main-services pad-top-150 pad-bottom-100">
+
+                <div class="container">
+                    <div class="row">
+                        <!-- main heading -->
+                        <div class="col-md-3 col-xs-12 col-sm-12 animated" data-fx="fadeInUp">
+                            <div class="main-head">
+                                <h1>كبسولات تربوية</h1>
+                                <h2>جديدنا</h2>
+                                <div class="news_owl">
+                                    <p>" احدث واهم اخبار غراس احدث واهم اخبار غراس احدث واهم اخبار غراس احدث واهم اخبار غراس احدث واهم اخبار غراس "</p>
+                                    <p>" احدث واهم اخبار غراس احدث واهم اخبار غراس احدث واهم اخبار غراس احدث واهم اخبار غراس احدث واهم اخبار غراس "</p>
+                                </div>
+                                <a class="more" href="#">شاهد كافة النصائح <i class="fa fa-angle-double-left"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 col-xs-12 col-sm-12 pad-top-25">
+                            <div class="row owl_advice">
+
+                                @{
+                                    bool newSilderStarted = false;
+                                    bool newSilderFinished = false;
+                                    EFDataLayer.vw_ItemsBaseData advice = null;
+                                    for (int i = 0; i < Model.LatestKabsolat.Count; i++)
+                                    {
+                                        advice = Model.LatestKabsolat[i];
+                                        if (i % 2 == 0)
+                                        {
+                                            if (newSilderStarted)
+                                            {
+                        @Html.Raw("</div>");
+                                                newSilderStarted = false;
+
+                                            }
+                        @Html.Raw("<div>");
+                                            newSilderStarted = true;
+                                        }
+
+                                //+------------------------------------
+                        <div class="ser-content-main">
+                            <div class="col-md-2 col-xs-3 col-sm-2">
+                                <div class="ser-box"> <img src="~/Content/images/advice.png" class="img-responsive" alt=""> </div>
+                            </div>
+                            <article class="col-md-10 col-xs-9 col-sm-10">
+                                <h2>@advice.Title </h2>
+                                <p>@advice.ShortDescription</p>
+                            </article>
+                        </div>
+                                //-------------------------------------
+
+
+                            }
+                            if (newSilderStarted)
+                            {
+                        @Html.Raw("</div>");
+                                newSilderStarted = false;
+
+                            }
+                                }
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===============================================================================
+                                    events section started
+             =============================================================================== -->
+        <section id="events" class="page-section-main">
+            <div class="events-main parallax-main-2">
+
+                <div id="events-bg-main" class="clear">
+                    <div class="events-bg-parallax resp-fix" data-velocity="-.5" data-fit="380" data-mypos="60%"></div>
+                    <div class="events-bg-parallax" data-velocity="-.5" data-fit="380" data-mypos="60%"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row pad-top-100 pad-bottom-100">
+                        <!-- events heading sectiom -->
+                        <div class="col-md-4 hidden-xs col-sm-5 animated" data-fx="fadeInUp">
+                            <div class="events-head">
+                                <h1>المناسبات</h1>
+                                <h2>العامة</h2>
+                                <p>التربية فن وعلم ومهارة ليست موروث تربوي خاطئ ولا ردات أفعال سريعة ولا اجتهادات فردية تحتمل الصواب والخطأ إنما هي علم نتعلمه ومهارة نتدرب عليها .</p>
+                                <a class="more" href="/Occasions/all/">شاهد كافة المناسبات <i class="fa fa-angle-double-left"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-xs-12 col-sm-7">
+                            <div class="owl_events">
+@foreach (var item in Model.LatestOccasions)
+{
+                                <div class="item">
+
+                                    <div class="events-content-main">
+                                        <!-- bg section -->
+                                        <div class="bg-events-box">
+                                            <div class="bg-events-ring"><a href="/Occasions/page/@item.ItemID/">@item.ItemDate.Value.ToString("d-M yyyy")</a> </div>
+                                            <p>@item.ShortDescription</p>
+                                            <h2>@item.Title</h2>
+                                        </div>
+                                        <!-- fg section -->
+                                        <div class="fg-right-hover">
+                                            <div class="fg-events-ring"> <a href="#">@item.ItemDate.Value.ToString("d-M")</a></div>
+                                            <ul>
+                                                <li>@item.ShortDescription</li>
+                                            </ul>
+                                            @*<h2>@item.Title</h2>*@
+                                            <div class="events-btn"><div class="fg-btn-hover"><a href="/Occasions/page/@item.ItemID/">شاهد المزيد</a></div><a href="/Occasions/page/@item.ItemID/">شاهد المزيد</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+}
+                              
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ==============================================================================
+                                  portfolio section started
+             ============================================================================== -->
+        <section id="portfolio" class="page-section-main">
+            <div class="port-wraper">
+
+                <div class="container">
+                    <div class="row pad-top-150">
+
+                        <div class="col-md-5 col-xs-12 pad-bottom-50 animated" data-fx="fadeInUp">
+                            <div class="port-head">
+                                <h1>غراس</h1>
+                                <h2>البوم الصور</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6 col-xs-12">
+                            <!-- <div class="port-ico-img"><i class="icon-stack"></i></div> -->
+                            <div class="port-nav">
+                                <ul class="filter" id="port-menu">
+                                    <li>
+                                        <a href="#" class="port-hover filter active" data-group="all">الكل</a>
+                                        <span>&nbsp; &nbsp;/</span>
+                                    </li>
+                                    @foreach (var item in Model.LatestAlbums)
+                                    {
+                                        <li>
+                                            <a href="#" class="filter" data-group="@item.ItemID">@item.Title</a>
+                                            <span>&nbsp; &nbsp;/</span>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--======== ajax area trigger =========== -->
+                <div class="ajax_area_trigger">
+
+                    <div class="ajax_close">
+                        <span><a href="#"><i class="icon-cross3"></i></a></span>
+                    </div>
+
+                    <div class="ajax_drop"></div>
+                </div>
+
+                <!--//////port conent area ///////-->
+                <div class="port-content-main">
+                    <div id="grid" class="port-row">
+                        @foreach (var photo in Model.LatestAlbumsFiles)
+                        {
+                            <div class="port-tile-main" data-groups='["all", "@photo.ItemID"]'>
+                                <div class="port-tile">
+                                    <div class="port-img"><img src="~/Content/images/gallery/g1.jpg" class="img-responsive" alt="port"></div>
+                                    <div class="fg-port-left"></div>
+                                    <div class="fg-port-sland-left"></div>
+                                    <div class="fg-port-sland-left-content">
+                                        <h1>@photo.Title</h1>
+                                        <h2>@photo.ItemTitle</h2>
+                            </div>
+                            <div class="port-btn">
+                                <a class="proj_ajax" href="project1.html"><i class="icon-link"></i></a>
+                                <a href="~/Content/images/gallery/g1.jpg" class="myElement"><i class="icon-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                        }
+                        <!-- 1st tile -->
+
+                    </div>
+                    <a class="more" href="#">شاهد كافة الصور <i class="fa fa-angle-double-left"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--=================================================================================
+                                          about section
+            ================================================================================= -->
+        <section id="libraries">
+            <div class="library-main clear">
+
+                <div class="container">
+                    <div class="row pad-top-50">
+                        <article class="col-md-12 col-sm-12 animated" data-fx="fadeInUp">
+                            <div class="libraries">
+                                <h2>مكتبة غراس <i class="fa fa-film"></i></h2>
+                                <div class="tab-wrap">
+                                    <div class="media">
+                                        <div class="parrent pull-left">
+                                            <ul class="nav nav-tabs nav-stacked">
+                                                <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01"><i class="fa fa-headphones"></i> صوتيات</a></li>
+                                                <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02"><i class="fa fa-video-camera"></i> فيديوهات</a></li>
+                                                <li class=""><a href="#tab3" data-toggle="tab" class="tehnical"><i class="fa fa-file-pdf-o"></i> كتب PDF</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="parrent media-body">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade" id="tab1">
+                                                    @foreach (var item in Model.LatestSoundTracks)
+                                                    {
+                                                        <div class="library col-md-3 col-xs-6">
+                                                            <img src="~/Content/images/audio.jpg" alt="" />
+                                                            <h3><a href="~/Content/images/audio.jpg" class="html5lightbox" data-width=800 data-height=400 title="">@item.Title</a></h3>
+                                                        </div>
+                                                    }
+                                                </div>
+
+                                                <div class="tab-pane fade active in" id="tab2">
+                                                    @foreach (var item in Model.LatestVideos)
+                                                    {
+                                                        <div class="library col-md-3 col-xs-6">
+                                                            <img src="~/Content/images/video.jpg" alt="" />
+                                                            <h3><a href="https://www.youtube.com/embed/wswxQ3mhwqQ" class="html5lightbox" data-width=800 data-height=400 title="">@item.Title</a></h3>
+                                                        </div>
+                                                    }
+
+                                                </div>
+
+                                                <div class="tab-pane fade" id="tab3">
+                                                    @foreach (var item in Model.LatestBooks)
+                                                    {
+                                                        <div class="library col-md-3 col-xs-6">
+                                                            <img src="~/Content/images/book.jpg" alt="" />
+                                                            <h3><a href="#">@item.Title</a></h3>
+                                                        </div>
+
+                                                    }
+
+                                                </div>
+
+                                            </div> <!--/.tab-content-->
+                                        </div> <!--/.media-body-->
+                                    </div> <!--/.media-->
+                                </div><!--/.tab-wrap-->
+                                <a class="more" href="#">شاهد المزيد <i class="fa fa-angle-double-left"></i></a>
+                            </div>
+
+
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===========================================================================
+                                  figure section started
+             =========================================================================== -->
+        <section ID="fig-parallax" class="parallax-main-3">
+
+            <div id="fig-bg-main">
+                <div class="fig-bg-parallax resp-fix" data-velocity="-.5" data-fit="00" data-mypos="40%"></div>
+                <div class="fig-bg-parallax resp-fix" data-velocity="-.5" data-fit="100" data-mypos="40%"></div>
+                <div class="fig-bg-parallax" data-velocity="-.3" data-fit="0" data-mypos="60%"></div>
+            </div>
+
+            <div class="container">
+                <div class="row pad-top-50 pad-bottom-50">
+                    <!-- 1st fig -->
+                    <div class="col-md-3 col-xs-12 col-sm-3">
+                        <div class="fig-content">
+                            <div class="fig-icon"> <img src="~/Content/images/fig/user.png" class="img-responsive" alt="fig"></div>
+                            <div class="fig-text">
+                                <h2>850+</h2>
+                                <h4>عدد الزوار</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd fig -->
+                    <div class="col-md-3 col-xs-12 col-sm-3">
+                        <div class="fig-content">
+                            <div class="fig-icon"> <img src="~/Content/images/fig/countdown.png" class="img-responsive" alt="fig"></div>
+                            <div class="fig-text">
+                                <h2>350+</h2>
+                                <h4>متواجدون حاليا</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3RD fig -->
+                    <div class="col-md-3 hidden-xs col-sm-3">
+                        <div class="fig-content">
+                            <div class="fig-icon"> <img src="~/Content/images/fig/contacts.png" class="img-responsive" alt="fig"></div>
+                            <div class="fig-text">
+                                <h2>599+</h2>
+                                <h4>عدد الكتب</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4TH fig -->
+                    <div class="col-md-3 col-xs-12 col-sm-3">
+                        <div class="fig-content">
+                            <div class="fig-icon"> <img src="~/Content/images/fig/newspaper.png" class="img-responsive" alt="fig"></div>
+                            <div class="fig-text">
+                                <h2>990+</h2>
+                                <h4>عدد المقالات</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================================
+                                       testimonial section
+             ============================================================================ -->
+        <section id="testimonial" class="parallax-main-4">
+
+            <div id="testi-bg-main">
+                <div class="testi-bg-parallax" data-velocity="0" data-fit="0" data-mypos="60%"></div>
+                <div class="testi-bg-parallax" data-velocity="0" data-fit="0" data-mypos="60%"></div>
+            </div>
+            <div class="container">
+                <div class="row pad-top-50">
+
+                    <!-- owl content area -->
+                    <section class="testimonials_owl">
+                        <!-- 1st slide -->
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-7 col-xs-12 col-sm-5">
+                                    <article class="testi-content">
+                                        <p>"أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس ." </p>
+                                    </article>
+                                </div>
+                                <div class="col-md-5 col-xs-12 col-sm-7">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="testi-img-box"><img src="~/Content/images/testi/02.jpg" class="img-responsive" alt="testi1"></div>
+                                        </div>
+
+                                        <div class="col-md-8 col-sm-8">
+                                            <div class="testi-name-section">
+                                                <h2>محمد المازن </h2>
+                                                <h4>طيب بشري</h4>
+                                                <a href="#"><i class="fa fa-thumbs-o-up"></i> 55</a>
+                                                <a href="#"><i class="fa fa-comments-o"></i> 55</a>
+                                                <a href="#"><i class="fa fa-share-alt"></i> 55</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 2nd slide -->
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-5">
+                                    <article class="testi-content">
+                                        <p>"أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس ." </p>
+                                    </article>
+                                </div>
+                                <div class="col-md-5 col-sm-7">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="testi-img-box"><img src="~/Content/images/testi/03.jpg" class="img-responsive" alt="testi1"></div>
+                                        </div>
+
+                                        <div class="col-md-8 col-sm-8">
+                                            <div class="testi-name-section">
+                                                <h2>محمد المازن </h2>
+                                                <h4>طيب بشري</h4>
+                                                <a href="#"><i class="fa fa-thumbs-o-up"></i> 55</a>
+                                                <a href="#"><i class="fa fa-comments-o"></i> 55</a>
+                                                <a href="#"><i class="fa fa-share-alt"></i> 55</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- ////3rd slide///// -->
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-5">
+                                    <article class="testi-content">
+                                        <p>"أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس أراء الأعضاء حول ما ينشر في غراس ." </p>
+                                    </article>
+                                </div>
+                                <div class="col-md-5 col-sm-7">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="testi-img-box"><img src="~/Content/images/testi/01.jpg" class="img-responsive" alt="testi1"></div>
+                                        </div>
+
+                                        <div class="col-md-8 col-sm-8">
+                                            <div class="testi-name-section">
+                                                <h2>محمد المازن </h2>
+                                                <h4>طيب بشري</h4>
+                                                <a href="#"><i class="fa fa-thumbs-o-up"></i> 55</a>
+                                                <a href="#"><i class="fa fa-comments-o"></i> 55</a>
+                                                <a href="#"><i class="fa fa-share-alt"></i> 55</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <!-- slide compete finished -->
+
+                </div>
+            </div>
+        </section>
+        <!-- =========================================================================
+                                        social section
+             ========================================================================= -->
+        

@@ -1,0 +1,140 @@
+﻿@using DCCMSNameSpace;
+@{
+    // ViewBag.Title = "Home Page";
+    this.Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>غراس</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico">
+
+    <!-- loader -->
+    <link rel="stylesheet" href="~/Content/css/jpreloader.css" />
+    <!-- mobile nav -->
+    <link rel="stylesheet" href="~/Content/css/slicknav.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap-rtl.css">
+    <!-- main styles -->
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <!-- Font styles -->
+    <link rel="stylesheet" href="~/Content/css/font-awesome.css">
+    <link rel="stylesheet" href="~/Content/css/icomoon.css">
+    <!-- project styles -->
+    <link rel="stylesheet" href="~/Content/css/style_projects.css">
+    <!-- light box -->
+    <link rel="stylesheet" href="~/Content/css/featherlight.min.css" media="screen" />
+    <!-- animate styles -->
+    <link rel="stylesheet" href="~/Content/css/animate.css">
+    <!-- morphtext script -->
+    <link rel="stylesheet" href="~/Content/css/morphext.css">
+    <!-- carousel styles -->
+    <link rel="stylesheet" href="~/Content/css/owl/owl-carousel/owl.carousel.css">
+    <!-- parallax styles -->
+    <link rel="stylesheet" href="~/Content/css/newparallax.css">
+    <!-- Responsive rules-->
+    <link rel="stylesheet" href="~/Content/css/responsive_rules.css">
+
+    <link rel="stylesheet" href="~/Content/css/effects.css" />
+    <!-- modernizer script -->
+    <script type="text/javascript" src="~/Content/js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+ 
+    @Html.Partial("~/Views/Shared/_MenuMobile.cshtml")
+
+
+    <div id="wrapper">
+        <!-- total wrapper -->
+        @Html.Partial("~/Views/Shared/_Header.cshtml")
+
+        @Html.Partial("~/Views/Shared/_Menu.cshtml")
+
+        @RenderBody()
+
+        @Html.Partial("~/Views/Shared/_Footer.cshtml")
+
+    </div> 
+    <!-- total wrapper ends -->
+
+    @Html.Partial("~/Views/Shared/_SearchBar.cshtml")
+    @Html.Partial("~/Views/Shared/_ShareVote.cshtml")
+
+
+
+    <script src="~/Content/js/jQuery-2.1.4.min.js"></script>	<!-- Essential Scripts -->
+    <script src="~/Content/js/jpreloader.min.js"></script>	  <!-- pre loader -->
+    <script src="~/Content/js/bootstrap.min.js"></script>       <!-- bootstrap -->
+    <script src="~/Content/js/html5lightbox.js"></script>
+    <script src="~/Content/js/less.min.js"></script>		    <!-- Less -->
+    <script src="~/Content/js/portfolio-init.js"></script>     <!-- suffle init -->
+    <script src="~/Content/js/plugins.js"></script>             <!-- plugins -->
+    <script src="~/Content/js/functions.js"></script>           <!-- main script -->
+    <!-- parallax init-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!device.tablet() && !device.mobile()) {
+                $('.parallax').scrolly({ bgParallax: true });
+                $('.events-bg-parallax').scrolly({ bgParallax: true });
+                $('.client-bg-parallax').scrolly({ bgParallax: true });
+                $('.fig-bg-parallax').scrolly({ bgParallax: true });
+                $('.testi-bg-parallax').scrolly({ bgParallax: true });
+                $('.social-bg-parallax').scrolly({ bgParallax: true });
+            }
+            else {
+                $(".resp-fix").addClass("add-resp-fix");
+            }
+        });
+    </script>
+
+    <!-- morphtext -->
+    <script type="text/javascript">
+        $("#js-rotating").Morphext({
+            animation: "fadeInRight",
+            separator: ",",
+            speed: 3000
+        });
+        $("#js-rotating-sub").Morphext({
+            animation: "fadeInRight",
+            separator: ",",
+            speed: 3000
+        });
+        $("#js-calendar").Morphext({
+            animation: "fadeInRight",
+            separator: ",",
+            speed: 3000
+        });
+    </script>
+
+    <!-- search -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".search-text").click(function () {
+                $(".search-form").toggle();
+            });
+        });
+    </script>
+
+    <!-- share -->
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            $('.floa2').click(function (e) {
+                $('.floa2').toggleClass('actir');
+                $('.share').toggleClass('no-left');
+            });
+        });
+        $(document).ready(function (e) {
+            $('.floa').click(function (e) {
+                $('.floa').toggleClass('actir');
+                $('.floaty').toggleClass('no-left');
+            });
+        });
+    </script>
+
+
+</body>
+</html>

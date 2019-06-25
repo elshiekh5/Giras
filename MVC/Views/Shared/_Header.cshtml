@@ -1,0 +1,72 @@
+﻿@using DCCMSNameSpace;
+@{
+    // ViewBag.Title = "Home Page";
+    this.Layout = null;
+    string BodyClasses = ViewBag.BodyClasses;
+    if (string.IsNullOrEmpty(BodyClasses))
+    {
+        BodyClasses = "page page-template-default";
+    }
+
+
+    List<ItemCategoriesEntity> allCategories = ItemCategoriesFactory.GetAll(13, -1, true, SitesHandler.GetOwnerIDAsGuid()).Distinct().ToList();
+    List<ItemCategoriesEntity> mainCategories = allCategories.Where(c => c.ParentID == 0).ToList();
+    List<ItemCategoriesEntity> subCategoreis = null;
+    var categoryLink = "";
+}
+
+<!--/////////////////////////////////////////////////////////////////
+                             home section
+ /////////////////////////////////////////////////////////////////////-->
+<section id="home">
+    <div class="autoheight-normal intro-bg">
+        <div class="autoheight-normal main-ovl-bg">
+
+            <nav class="right-nav splash-section hidden-xs hidden-sm">
+                <ul class="vertical-center scrolling-links">
+
+                    @foreach (var c in mainCategories)
+                    {
+                        subCategoreis = allCategories.Where(e => e.ParentID == c.CategoryID).ToList();
+                        if (subCategoreis != null && subCategoreis.Count > 0)
+                        {
+                            categoryLink = "#";
+                        }
+                        else
+                        {
+                            categoryLink = "/Articles/cat/"+c.CategoryID+"/page/1/";
+
+                        }
+                        <li>
+                            <i class="@(MVC.Services.GirasServise.GetBaseCategoryIcon(c.CategoryID))"></i>
+                            <div class="top-hover-nav"><a class="sub-link" href="@categoryLink"><span>@c.Title</span></a></div>
+                            <div class="top-hover-link">
+                                @foreach (var subc in subCategoreis)
+                                {
+
+                                    <a class="sub-link" href="/Articles/cat/@(subc.CategoryID)/page/1/">@subc.Title</a>
+
+                                }
+                            </div>
+                        </li>
+
+                    }
+
+
+
+
+                </ul>
+            </nav>
+            <!-- home content area -->
+            <div class="home-content-main">
+
+                <div class="home-text">
+                    <h1><span id="js-rotating">تربية الأبناء, التعليم قبل, قواعد في فن</span></h1>
+                    <h2><span id="js-rotating-sub">رسالة علم ومهارة, التوجيه أو التوبيخ, التعامل مع المراهق</span></h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+

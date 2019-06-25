@@ -1,0 +1,700 @@
+
+@media screen and (min-width: 2400px) and (max-width: 3000px) {
+
+}
+/*---------------------------------width 1920 started-----------------------------------*/
+@media screen and (min-width: 1920px) and (max-width: 2400px) {
+
+}
+/*---------------------------------width 1920 completed-----------------------------------*/
+/*---------------------------------width 1600 started-----------------------------------*/
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+ 
+}
+/*---------------------------------width 1600 completed-----------------------------------*/
+/*---------------------------------width 1170 started-----------------------------------*/
+@media screen and (min-width: 1200px) and (max-width: 1279px) {
+
+}
+/*---------------------------------width 1200 completed-----------------------------------*/
+/*---------------------------------width 1024 started-------------------------------------*/
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+
+/*================================================
+                shop-product styles
+==================================================*/
+ /*owl slider controls*/
+ .shop_owl .owl-controls 
+ {
+  bottom: 75px;
+  right: 15px;
+ }
+   /*related controls*/
+ .prev
+ {
+  left: -20px;
+ }
+ .next
+ {
+  right: -20px;
+ }
+ /*================================================
+                shop-item styles
+==================================================*/
+ .sh-item-content-main ul
+ {
+  padding-left: 0;
+ }
+ /*tags area*/
+ .sh-item-tags
+ {
+  width: 100%;
+  height: 50px;
+ }
+ .sh-item-qty
+ {
+  margin-right: 10px; 
+ }
+ .sh-item-selector
+ {
+  margin-right: 5px; 
+ }
+ .tab-content ul
+ {
+  padding-left: 0;
+ }
+
+
+}
+/*--------------------------------width 1024 completed-----------------------------------*/
+/*---------------------------------width 992 started-------------------------------------*/
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+
+/*================================================
+                shop-product styles
+==================================================*/
+ /*owl slider controls*/
+ .shop_owl .owl-controls 
+ {
+  bottom: 75px;
+  right: 15px;
+ }
+ /*================================================
+                shop-item styles
+==================================================*/
+ .sh-item-content-main ul
+ {
+  padding-left: 0;
+ }
+ /*tags area*/
+ .sh-item-tags
+ {
+  width: 100%;
+  height: 50px;
+ }
+ .sh-item-qty
+ {
+  margin-right: 10px; 
+ }
+ .sh-item-selector
+ {
+  margin-right: 5px; 
+ }
+ .tab-content ul
+ {
+  padding-left: 0;
+ }
+
+}
+ /*------------------------width 992 completed----------------------------------------------- */
+/*------------------------------------width 768 started---------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+ /*================================================
+                shop-product styles
+==================================================*/
+ /*owl slide*/
+ .shop_owl_item
+ {
+  height: 400px;
+ }
+ /*slide1*/
+ .sh-slide-1
+ {
+  text-align: center;
+ }
+ .sh-slide-1 img
+ {
+  margin-top: 90%;
+  margin-bottom: 0px;
+  display: inline-block;
+  width: 80%;
+ }
+ /*----slide2-----*/
+ .sh-slide-2 h1
+ {
+  margin-top: 20%;
+ }
+ /*slide3*/
+ .sh-slide-3 h1
+ {
+  margin-top: 15%;
+ }
+
+ /*related controls*/
+ .prev
+ {
+  left: 0px;
+  top: 60%;
+ }
+ .next
+ {
+  right: 0px;
+  top: 60%;
+ }
+   /*================================================
+                shop-item styles
+==================================================*/
+ .sh-item-content-main
+ {
+  margin-top: 115px;
+ }
+ .sh-item-content-main ul
+ {
+  padding-left: 0;
+ }
+ .tab-content ul
+ {
+  padding-left: 0;
+ }
+
+
+
+}
+ /*------------------------width 768 completed----------------------------------------------- */
+/*------------------------600 optimization started-------------------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 767px){
+
+/*================================================
+                shop-product styles
+==================================================*/
+ /*owl slide*/
+ .shop_owl_item
+ {
+  height: 330px;
+ }
+ /*slide1*/
+ .sh-slide-1 img
+ {
+  margin-top: 70%;
+  margin-bottom: 0px;
+  width: 60%;
+  height: auto;
+ }
+ .sh-slide-1-btn
+ {
+  padding-top: 14px;
+  font-size: 12px;
+  text-align: left;
+ }
+ /*----slide2-----*/
+ .sh-slide-2 h1
+ {
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-top: 20%;
+ }
+.sh-slide-2 h5
+ {
+  font-size: 12px;
+  letter-spacing: 2px;
+ }
+ .sh-slide-2-btn
+ {
+  padding-top: 20px;
+  font-size: 15px;
+ }
+ /*slide3*/
+ .sh-slide-3 h1
+ {
+
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-top: 15%;
+ }
+ .sh-slide-3 h5
+ {
+  font-size: 14px;
+  letter-spacing: 4px;
+ }
+ .shop_owl .owl-controls 
+ {
+  bottom: 25px;
+  right: 15px;
+ }
+ /*related controls*/
+ .prev
+ {
+  left: 0px;
+  top: 60%;
+ }
+ .next
+ {
+  right: 0px;
+  top: 60%;
+ }
+  /*================================================
+                shop-item styles
+==================================================*/
+ .sh-item-content-main
+ {
+  margin-top: 115px;
+ }
+ .sh-item-content-main h2
+ {
+  letter-spacing: 1px;
+  font-size: 24px;
+ }
+ .sh-item-content-main ul
+ {
+  padding-left: 0;
+ }
+ /*tags area*/
+ .sh-item-tags
+ {
+  width: 100%;
+  height: 50px;
+ }
+ .sh-item-qty
+ {
+  margin-right: 30px; 
+ }
+ .sh-item-selector
+ {
+  margin-right: 5px; 
+ }
+ .tab-content ul
+ {
+  padding-left: 0;
+ }
+
+
+}
+ /*-------------------------- width  600 optimisation completed----------------------------------*/
+ /*--------------------------- width 480 optimization started------------------------------------*/
+@media screen and (min-width: 480px) and (max-width: 599px) {
+
+/*================================================
+                shop-product styles
+==================================================*/
+ /*owl slide*/
+ .shop_owl_item
+ {
+  height: 270px;
+ }
+ /*slide1*/
+ .sh-slide-1 img
+ {
+  margin-top: 40%;
+  margin-bottom: 0px;
+  width: 30%;
+  height: auto;
+ }
+ .sh-slide-1-btn
+ {
+  padding-top: 12px;
+  font-size: 12px;
+  text-align: left;
+ }
+ /*----slide2-----*/
+ .sh-slide-2 h1
+ {
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-top: 20%;
+ }
+.sh-slide-2 h5
+ {
+  font-size: 12px;
+  letter-spacing: 2px;
+ }
+ .sh-slide-2-btn
+ {
+  padding-top: 20px;
+  font-size: 15px;
+ }
+ /*slide3*/
+ .sh-slide-3 h1
+ {
+
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-top: 15%;
+ }
+ .sh-slide-3 h5
+ {
+  font-size: 14px;
+  letter-spacing: 4px;
+ }
+ .shop_owl .owl-controls 
+ {
+  bottom: 25px;
+  right: 15px;
+ }
+ /*related controls*/
+ .prev
+ {
+  left: 0px;
+  top: 60%;
+ }
+ .next
+ {
+  right: 0px;
+  top: 60%;
+ }
+ /*================================================
+                shop-item styles
+==================================================*/
+ .sh-item-content-main
+ {
+  margin-top: 115px;
+ }
+ .sh-item-content-main h2
+ {
+  letter-spacing: 1px;
+  font-size: 24px;
+ }
+ .sh-item-content-main ul
+ {
+  padding-left: 0;
+ }
+ /*tags area*/
+ .sh-item-tags
+ {
+  width: 100%;
+  height: 50px;
+ }
+ .sh-item-qty
+ {
+  margin-right: 30px; 
+ }
+ .sh-item-selector
+ {
+  margin-right: 5px; 
+ }
+ .tab-content ul
+ {
+  padding-left: 0;
+ }
+
+
+
+}
+/*--------------------------max width  480 optimisation completed----------------------------------*/
+
+/*--------------------------width  360 optimisation started----------------------------------------*/
+
+@media screen and (min-width: 360px) and (max-width: 479px) {
+
+/*================================================
+                shop-product styles
+==================================================*/
+ .shop-head-main h1
+ {
+  margin-top: 70px;
+  letter-spacing: 8px;
+  font-size: 30px;
+
+ }
+ .shop-head-main h3
+ {
+  font-size: 12px;
+  letter-spacing: 4px;
+ }
+ /*owl slide*/
+ .shop_owl_item
+ {
+  height: 200px;
+ }
+ /*slide1*/
+ .sh-slide-1 img
+ {
+  margin-top: 40%;
+  margin-bottom: 0px;
+  width: 30%;
+  height: auto;
+ }
+ .sh-slide-1-btn
+ {
+  padding-top: 12px;
+  font-size: 12px;
+  text-align: left;
+ }
+ /*----slide2-----*/
+ .sh-slide-2 h1
+ {
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-top: 20%;
+ }
+.sh-slide-2 h5
+ {
+  font-size: 12px;
+  letter-spacing: 2px;
+ }
+ .sh-slide-2-btn
+ {
+  padding-top: 20px;
+  font-size: 15px;
+ }
+ /*slide3*/
+ .sh-slide-3 h1
+ {
+
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-top: 15%;
+ }
+ .sh-slide-3 h5
+ {
+  font-size: 14px;
+  letter-spacing: 4px;
+ }
+ .shop_owl .owl-controls 
+ {
+  bottom: 25px;
+  right: 15px;
+ }
+ /*related controls*/
+ .prev
+ {
+  left: 0px;
+  top: 60%;
+ }
+ .next
+ {
+  right: 0px;
+  top: 60%;
+ }
+/*================================================
+                shop-item styles
+==================================================*/
+ .sh-item-content-main
+ {
+  margin-top: 115px;
+ }
+ .sh-item-content-main h2
+ {
+  letter-spacing: 1px;
+  font-size: 20px;
+ }
+ .sh-item-content-main ul
+ {
+  padding-left: 0;
+ }
+ /*tags area*/
+ .sh-item-tags
+ {
+  width: 100%;
+  height: 50px;
+ }
+ .sh-item-qty
+ {
+  margin-right: 10px; 
+ }
+ .sh-item-selector
+ {
+  margin-right: 5px; 
+ }
+ .tab-content ul
+ {
+  padding-left: 0;
+ }
+/*================================================
+                shop-item styles
+==================================================*/
+ .sh-cart-head h1
+ {
+  margin-top: 0;
+ }
+ .sh-cart-table th
+ {
+  height: 60px;
+  font-size: 12px;
+  letter-spacing: 0px;
+ }
+ .sh-cart-table td a
+ {
+  font-size: 10px;
+ }
+ .sh-cart-table span
+ {
+  padding: 2px 1px;
+ }
+ .cart-btn
+ {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+ }
+ .cart-btn a
+ {
+  margin: 5px;
+  margin-top: 20px;
+  font-size: 10px;
+ }
+
+
+} /*responsive 360 full cmpleted*/
+   
+/*--------------------------max width  360 optimisation completed----------------------------------*/
+/*============================max width  320 optimisation started===================================*/
+@media screen and (min-width: 320px) and (max-width: 359px) {
+
+/*================================================
+                shop-product styles
+==================================================*/
+ .shop-head-main h1
+ {
+  margin-top: 70px;
+  letter-spacing: 8px;
+  font-size: 30px;
+
+ }
+ .shop-head-main h3
+ {
+  font-size: 12px;
+  letter-spacing: 4px;
+ }
+ /*owl slide*/
+ .shop_owl_item
+ {
+  height: 200px;
+ }
+ /*slide1*/
+ .sh-slide-1 img
+ {
+  margin-top: 40%;
+  margin-bottom: 0px;
+  width: 30%;
+  height: auto;
+ }
+ .sh-slide-1-btn
+ {
+  padding-top: 12px;
+  font-size: 12px;
+  text-align: left;
+ }
+ /*----slide2-----*/
+ .sh-slide-2 h1
+ {
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-top: 20%;
+ }
+.sh-slide-2 h5
+ {
+  font-size: 12px;
+  letter-spacing: 2px;
+ }
+ .sh-slide-2-btn
+ {
+  padding-top: 20px;
+  font-size: 15px;
+ }
+ /*slide3*/
+ .sh-slide-3 h1
+ {
+
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-top: 15%;
+ }
+ .sh-slide-3 h5
+ {
+  font-size: 14px;
+  letter-spacing: 4px;
+ }
+ .shop_owl .owl-controls 
+ {
+  bottom: 35px;
+  right: 15px;
+ }
+ /*related controls*/
+ .prev
+ {
+  left: 0px;
+  top: 60%;
+ }
+ .next
+ {
+  right: 0px;
+  top: 60%;
+ }
+/*================================================
+                shop-item styles
+==================================================*/
+ .sh-item-content-main
+ {
+  margin-top: 115px;
+ }
+ .sh-item-content-main h2
+ {
+  letter-spacing: 1px;
+  font-size: 20px;
+ }
+ .sh-item-content-main ul
+ {
+  padding-left: 0;
+ }
+ /*tags area*/
+ .sh-item-tags
+ {
+  width: 100%;
+  height: 50px;
+ }
+ .sh-item-qty
+ {
+  margin-right: 10px; 
+ }
+ .sh-item-selector
+ {
+  margin-right: 5px; 
+ }
+ .tab-content ul
+ {
+  padding-left: 0;
+ }
+ /*================================================
+                shop-item styles
+==================================================*/
+ .sh-cart-head h1
+ {
+  margin-top: 0;
+ }
+ .sh-cart-table th
+ {
+  height: 60px;
+  font-size: 12px;
+  letter-spacing: 0px;
+ }
+ .sh-cart-table td a
+ {
+  font-size: 10px;
+ }
+ .cart-btn
+ {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+ }
+ .cart-btn a
+ {
+  margin: 5px;
+  margin-top: 20px;
+  font-size: 10px;
+ }
+}  
+/*----------------------------responsive 320 full cmpleted--------------------------------------*/
+ 

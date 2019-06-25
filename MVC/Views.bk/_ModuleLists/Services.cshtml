@@ -1,0 +1,55 @@
+﻿@{
+    List<AppService.FrontItemsModel> itemList = AppService.FrontItemsController.GetModuleData(this.ViewBag.ModuleTypeID, "Services");
+}
+<div class="col-sm-12 wpb_column ">
+    <div class="wpb_wrapper">
+        <div class="container">
+            <div class="wpb_text_column wpb_content_element ">
+                <div class="wpb_wrapper">
+
+                    <div class="heading-box">
+                        <h2 class="box-title">@Resources.SiteText.GenevaServicesTitle
+</h2>
+                        <p class="desc-lg">
+                           @Resources.SiteText.GenevaServicesIntro
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wpb_column col-sm-12">
+    <div class="vc_column-inner ">
+        <div class="wpb_wrapper">
+            <div class="row">
+
+                @if (itemList != null)
+                {
+                    foreach (var item in itemList)
+                    {
+                        <div class="col-sm-6 col-md-4">
+                            <div class="shortcode-banner style-animated">
+                                <img  src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)"
+                                     class="attachment-gallery_medium size-gallery_medium wp-post-image" alt="@item.Title" 
+                                       />
+                                <div class="shortcode-banner-inside">
+                                    <div class="shortcode-banner-content">
+                                        <h3 class="banner-title">@item.Title</h3>
+                                        <div class="details">
+                                            <p>@item.ShortDescription</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                }
+            </div>
+        </div>
+    </div>
+</div>

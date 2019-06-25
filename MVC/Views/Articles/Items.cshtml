@@ -1,0 +1,64 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@using MVC.Models;
+@{
+    this.Layout = "~/Views/Shared/_LayoutArticles.cshtml";
+
+    string LinkPattern = "";
+    List<AppService.FrontItemsModel> ItemsList;
+    int index = ViewBag.PageIndex;
+    int pageSize = 12;
+    int totalItemsCount = 0;
+    int categoryId = 0;
+    //int langID = (int)SiteSettings.GetCurrentLanguage();
+
+    if (ViewBag.CategoryID != null)
+    {
+        categoryId = ViewBag.CategoryID ;
+    }
+    /*
+    if (MoversFW.Components.UrlManager.ChechIsValidIntegerParameter("index"))
+    {
+        index = Convert.ToInt32(Request.QueryString["index"]);
+    }*/
+    ItemsList = AppService.FrontItemsController.GetModuleCategoryDataPageByPage(13, categoryId, "GirasArticlesPagingByCategory", index, pageSize, out totalItemsCount);
+    PagerModel pager = new PagerModel();
+    pager.TotalRecords = totalItemsCount;
+    pager.PageSize = pageSize;
+    pager.LinkPattern = "/Articles/cat/1021/page/{0}/";//SiteUrlsManager.GetDefaultPageLink(ViewBag.CurrentModule);
+    pager.CurrentPage = index;
+
+
+    ItemCategoriesEntity category = ItemCategoriesFactory.GetObject(categoryId, SiteSettings.GetCurrentLanguage(), new Guid());
+
+}
+
+<div class="inners">
+    <h2 class="inner-tittel">@category.Title</h2>
+    @if (ItemsList != null && ItemsList.Count > 0)
+    {
+    <div class="subjects">
+        <div class="grid">
+            @foreach (var item in ItemsList)
+            {
+                <figure class="effect-lexi">
+                    <img src="/Content/images/img1.jpg" data-src="@(@DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathThumb)" alt="img12" />
+                    <figcaption>
+                        <h2>@item.Title</h2>
+                        <p>لمشاهدة التفاصيل اضغط هنا...</p>
+                        <a href="@SiteUrlsManager.GetSinglesPageLink(ViewBag.CurrentModule, item.ItemID)">View more</a>
+                    </figcaption>
+                </figure>
+            }
+            
+        </div>
+
+        @Html.Partial("~/Views/PartialViews/Pager.cshtml", pager)
+       
+
+
+    </div>
+    }
+</div>
+
+

@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GirasDbContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CMS_Giras.dbo.vw_Categories' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_Categories">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="ModuleTypeID" />
+            <PropertyRef Name="Vistites_Count" />
+            <PropertyRef Name="Date_Added" />
+            <PropertyRef Name="IsAvailable" />
+            <PropertyRef Name="Expr1" />
+            <PropertyRef Name="LangID" />
+            <PropertyRef Name="Title" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="PhotoExtension" Type="varchar" MaxLength="5" />
+          <Property Name="ModuleTypeID" Type="int" Nullable="false" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="AllItemsCount" Type="int" />
+          <Property Name="ActiveItemsCount" Type="int" />
+          <Property Name="Path" Type="varchar" MaxLength="256" />
+          <Property Name="TotalSubItems" Type="int" />
+          <Property Name="MostRecentSubItemDate" Type="datetime" />
+          <Property Name="TypeID" Type="int" />
+          <Property Name="Vistites_Count" Type="int" Nullable="false" />
+          <Property Name="Date_Added" Type="datetime" Nullable="false" />
+          <Property Name="ItemDate" Type="datetime" />
+          <Property Name="IsAvailable" Type="bit" Nullable="false" />
+          <Property Name="IsMain" Type="bit" />
+          <Property Name="Priority" Type="int" />
+          <Property Name="Photo2Extension" Type="nvarchar" MaxLength="256" />
+          <Property Name="VideoExtension" Type="varchar" MaxLength="5" />
+          <Property Name="AudioExtension" Type="varchar" MaxLength="5" />
+          <Property Name="FileExtension" Type="varchar" MaxLength="5" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Width" Type="int" />
+          <Property Name="YoutubeCode" Type="varchar" MaxLength="256" />
+          <Property Name="InsertUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="LastUpdateUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="GoogleLatitude" Type="float" />
+          <Property Name="GoogleLongitude" Type="float" />
+          <Property Name="OnlyForRegisered" Type="bit" />
+          <Property Name="PublishPhoto" Type="bit" />
+          <Property Name="PublishPhoto2" Type="bit" />
+          <Property Name="PublishFile" Type="bit" />
+          <Property Name="PublishAudio" Type="bit" />
+          <Property Name="PublishVideo" Type="bit" />
+          <Property Name="PublishYoutbe" Type="bit" />
+          <Property Name="OwnerID" Type="uniqueidentifier" />
+          <Property Name="LastModification" Type="datetime" />
+          <Property Name="OwnerName" Type="varchar" MaxLength="128" />
+          <Property Name="Expr1" Type="int" Nullable="false" />
+          <Property Name="LangID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ShortDescription" Type="nvarchar" MaxLength="512" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="KeyWords" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CMS_Giras.dbo.vw_ItemFiles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_ItemFiles">
+          <Key>
+            <PropertyRef Name="FileID" />
+            <PropertyRef Name="ItemID" />
+            <PropertyRef Name="FileExtension" />
+            <PropertyRef Name="FileType" />
+            <PropertyRef Name="ModuleTypeID" />
+            <PropertyRef Name="ItemTitle" />
+          </Key>
+          <Property Name="FileID" Type="int" Nullable="false" />
+          <Property Name="ItemID" Type="int" Nullable="false" />
+          <Property Name="FileExtension" Type="varchar" MaxLength="512" Nullable="false" />
+          <Property Name="FileType" Type="int" Nullable="false" />
+          <Property Name="InsertUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="LastUpdateUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="ModuleTypeID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="512" />
+          <Property Name="OwnerID" Type="uniqueidentifier" />
+          <Property Name="OwnerName" Type="varchar" MaxLength="128" />
+          <Property Name="ItemTitle" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'CMS_Giras.dbo.vw_ItemsBaseData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_ItemsBaseData">
+          <Key>
+            <PropertyRef Name="ItemID" />
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="ModuleTypeID" />
+            <PropertyRef Name="Vistites_Count" />
+            <PropertyRef Name="Date_Added" />
+            <PropertyRef Name="IsAvailable" />
+            <PropertyRef Name="Title" />
+            <PropertyRef Name="LangID" />
+          </Key>
+          <Property Name="ItemID" Type="int" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="ModuleTypeID" Type="int" Nullable="false" />
+          <Property Name="PhotoExtension" Type="varchar" MaxLength="5" />
+          <Property Name="Url" Type="nvarchar" MaxLength="128" />
+          <Property Name="Email" Type="nvarchar" MaxLength="128" />
+          <Property Name="MailBox" Type="nvarchar" MaxLength="128" />
+          <Property Name="ZipCode" Type="nvarchar" MaxLength="128" />
+          <Property Name="Tels" Type="nvarchar" MaxLength="128" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="128" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="128" />
+          <Property Name="Vistites_Count" Type="int" Nullable="false" />
+          <Property Name="Date_Added" Type="datetime" Nullable="false" />
+          <Property Name="ItemDate" Type="datetime" />
+          <Property Name="ItemEndDate" Type="datetime" />
+          <Property Name="IsAvailable" Type="bit" Nullable="false" />
+          <Property Name="IsMain" Type="bit" />
+          <Property Name="Priority" Type="int" />
+          <Property Name="AuthorID" Type="int" />
+          <Property Name="Photo2Extension" Type="varchar" MaxLength="5" />
+          <Property Name="VideoExtension" Type="varchar" MaxLength="5" />
+          <Property Name="AudioExtension" Type="varchar" MaxLength="5" />
+          <Property Name="FileExtension" Type="varchar" MaxLength="5" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Width" Type="int" />
+          <Property Name="InsertUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="LastUpdateUserName" Type="nvarchar" MaxLength="128" />
+          <Property Name="ActiveComments" Type="int" />
+          <Property Name="InactiveComments" Type="int" />
+          <Property Name="YoutubeCode" Type="nvarchar" MaxLength="128" />
+          <Property Name="RatingCount" Type="int" />
+          <Property Name="RatingValue" Type="int" />
+          <Property Name="GoogleLatitude" Type="float" />
+          <Property Name="GoogleLongitude" Type="float" />
+          <Property Name="Price" Type="nvarchar" MaxLength="128" />
+          <Property Name="OnlyForRegisered" Type="bit" />
+          <Property Name="PublishPhoto" Type="bit" />
+          <Property Name="PublishPhoto2" Type="bit" />
+          <Property Name="PublishFile" Type="bit" />
+          <Property Name="PublishAudio" Type="bit" />
+          <Property Name="PublishVideo" Type="bit" />
+          <Property Name="PublishYoutbe" Type="bit" />
+          <Property Name="IsVisitorsParticipations" Type="bit" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="128" />
+          <Property Name="SenderEMail" Type="varchar" MaxLength="128" />
+          <Property Name="SenderCountryID" Type="int" />
+          <Property Name="Reply" Type="nvarchar(max)" />
+          <Property Name="ReplyDate" Type="datetime" />
+          <Property Name="IsSeen" Type="bit" />
+          <Property Name="IsReplied" Type="bit" />
+          <Property Name="IsReviewed" Type="bit" />
+          <Property Name="ToUserID" Type="uniqueidentifier" />
+          <Property Name="ActivatedBy" Type="nvarchar" MaxLength="128" />
+          <Property Name="ReviewedBy" Type="nvarchar" MaxLength="128" />
+          <Property Name="OwnerID" Type="uniqueidentifier" />
+          <Property Name="Type" Type="int" />
+          <Property Name="LastModification" Type="datetime" />
+          <Property Name="RequestTotalCount" Type="int" />
+          <Property Name="RequestNewCount" Type="int" />
+          <Property Name="OwnerName" Type="varchar" MaxLength="128" />
+          <Property Name="PropertyNames" Type="nvarchar(max)" />
+          <Property Name="PropertyValuesString" Type="nvarchar(max)" />
+          <Property Name="SpecialOption" Type="bit" />
+          <Property Name="Icon" Type="varchar" MaxLength="32" />
+          <Property Name="Title" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="AuthorName" Type="nvarchar" MaxLength="128" />
+          <Property Name="Address" Type="nvarchar" MaxLength="128" />
+          <Property Name="LangID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GirasDbContextStoreContainer">
+          <EntitySet Name="vw_Categories" EntityType="Self.vw_Categories" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_Categories].[CategoryID] AS [CategoryID], 
+    [vw_Categories].[PhotoExtension] AS [PhotoExtension], 
+    [vw_Categories].[ModuleTypeID] AS [ModuleTypeID], 
+    [vw_Categories].[ParentID] AS [ParentID], 
+    [vw_Categories].[AllItemsCount] AS [AllItemsCount], 
+    [vw_Categories].[ActiveItemsCount] AS [ActiveItemsCount], 
+    [vw_Categories].[Path] AS [Path], 
+    [vw_Categories].[TotalSubItems] AS [TotalSubItems], 
+    [vw_Categories].[MostRecentSubItemDate] AS [MostRecentSubItemDate], 
+    [vw_Categories].[TypeID] AS [TypeID], 
+    [vw_Categories].[Vistites_Count] AS [Vistites_Count], 
+    [vw_Categories].[Date_Added] AS [Date_Added], 
+    [vw_Categories].[ItemDate] AS [ItemDate], 
+    [vw_Categories].[IsAvailable] AS [IsAvailable], 
+    [vw_Categories].[IsMain] AS [IsMain], 
+    [vw_Categories].[Priority] AS [Priority], 
+    [vw_Categories].[Photo2Extension] AS [Photo2Extension], 
+    [vw_Categories].[VideoExtension] AS [VideoExtension], 
+    [vw_Categories].[AudioExtension] AS [AudioExtension], 
+    [vw_Categories].[FileExtension] AS [FileExtension], 
+    [vw_Categories].[Height] AS [Height], 
+    [vw_Categories].[Width] AS [Width], 
+    [vw_Categories].[YoutubeCode] AS [YoutubeCode], 
+    [vw_Categories].[InsertUserName] AS [InsertUserName], 
+    [vw_Categories].[LastUpdateUserName] AS [LastUpdateUserName], 
+    [vw_Categories].[GoogleLatitude] AS [GoogleLatitude], 
+    [vw_Categories].[GoogleLongitude] AS [GoogleLongitude], 
+    [vw_Categories].[OnlyForRegisered] AS [OnlyForRegisered], 
+    [vw_Categories].[PublishPhoto] AS [PublishPhoto], 
+    [vw_Categories].[PublishPhoto2] AS [PublishPhoto2], 
+    [vw_Categories].[PublishFile] AS [PublishFile], 
+    [vw_Categories].[PublishAudio] AS [PublishAudio], 
+    [vw_Categories].[PublishVideo] AS [PublishVideo], 
+    [vw_Categories].[PublishYoutbe] AS [PublishYoutbe], 
+    [vw_Categories].[OwnerID] AS [OwnerID], 
+    [vw_Categories].[LastModification] AS [LastModification], 
+    [vw_Categories].[OwnerName] AS [OwnerName], 
+    [vw_Categories].[Expr1] AS [Expr1], 
+    [vw_Categories].[LangID] AS [LangID], 
+    [vw_Categories].[Title] AS [Title], 
+    [vw_Categories].[ShortDescription] AS [ShortDescription], 
+    [vw_Categories].[Description] AS [Description], 
+    [vw_Categories].[KeyWords] AS [KeyWords]
+    FROM [dbo].[vw_Categories] AS [vw_Categories]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_ItemFiles" EntityType="Self.vw_ItemFiles" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_ItemFiles].[FileID] AS [FileID], 
+    [vw_ItemFiles].[ItemID] AS [ItemID], 
+    [vw_ItemFiles].[FileExtension] AS [FileExtension], 
+    [vw_ItemFiles].[FileType] AS [FileType], 
+    [vw_ItemFiles].[InsertUserName] AS [InsertUserName], 
+    [vw_ItemFiles].[LastUpdateUserName] AS [LastUpdateUserName], 
+    [vw_ItemFiles].[ModuleTypeID] AS [ModuleTypeID], 
+    [vw_ItemFiles].[Title] AS [Title], 
+    [vw_ItemFiles].[OwnerID] AS [OwnerID], 
+    [vw_ItemFiles].[OwnerName] AS [OwnerName], 
+    [vw_ItemFiles].[ItemTitle] AS [ItemTitle]
+    FROM [dbo].[vw_ItemFiles] AS [vw_ItemFiles]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_ItemsBaseData" EntityType="Self.vw_ItemsBaseData" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_ItemsBaseData].[ItemID] AS [ItemID], 
+    [vw_ItemsBaseData].[CategoryID] AS [CategoryID], 
+    [vw_ItemsBaseData].[ModuleTypeID] AS [ModuleTypeID], 
+    [vw_ItemsBaseData].[PhotoExtension] AS [PhotoExtension], 
+    [vw_ItemsBaseData].[Url] AS [Url], 
+    [vw_ItemsBaseData].[Email] AS [Email], 
+    [vw_ItemsBaseData].[MailBox] AS [MailBox], 
+    [vw_ItemsBaseData].[ZipCode] AS [ZipCode], 
+    [vw_ItemsBaseData].[Tels] AS [Tels], 
+    [vw_ItemsBaseData].[Fax] AS [Fax], 
+    [vw_ItemsBaseData].[Mobile] AS [Mobile], 
+    [vw_ItemsBaseData].[Vistites_Count] AS [Vistites_Count], 
+    [vw_ItemsBaseData].[Date_Added] AS [Date_Added], 
+    [vw_ItemsBaseData].[ItemDate] AS [ItemDate], 
+    [vw_ItemsBaseData].[ItemEndDate] AS [ItemEndDate], 
+    [vw_ItemsBaseData].[IsAvailable] AS [IsAvailable], 
+    [vw_ItemsBaseData].[IsMain] AS [IsMain], 
+    [vw_ItemsBaseData].[Priority] AS [Priority], 
+    [vw_ItemsBaseData].[AuthorID] AS [AuthorID], 
+    [vw_ItemsBaseData].[Photo2Extension] AS [Photo2Extension], 
+    [vw_ItemsBaseData].[VideoExtension] AS [VideoExtension], 
+    [vw_ItemsBaseData].[AudioExtension] AS [AudioExtension], 
+    [vw_ItemsBaseData].[FileExtension] AS [FileExtension], 
+    [vw_ItemsBaseData].[Height] AS [Height], 
+    [vw_ItemsBaseData].[Width] AS [Width], 
+    [vw_ItemsBaseData].[InsertUserName] AS [InsertUserName], 
+    [vw_ItemsBaseData].[LastUpdateUserName] AS [LastUpdateUserName], 
+    [vw_ItemsBaseData].[ActiveComments] AS [ActiveComments], 
+    [vw_ItemsBaseData].[InactiveComments] AS [InactiveComments], 
+    [vw_ItemsBaseData].[YoutubeCode] AS [YoutubeCode], 
+    [vw_ItemsBaseData].[RatingCount] AS [RatingCount], 
+    [vw_ItemsBaseData].[RatingValue] AS [RatingValue], 
+    [vw_ItemsBaseData].[GoogleLatitude] AS [GoogleLatitude], 
+    [vw_ItemsBaseData].[GoogleLongitude] AS [GoogleLongitude], 
+    [vw_ItemsBaseData].[Price] AS [Price], 
+    [vw_ItemsBaseData].[OnlyForRegisered] AS [OnlyForRegisered], 
+    [vw_ItemsBaseData].[PublishPhoto] AS [PublishPhoto], 
+    [vw_ItemsBaseData].[PublishPhoto2] AS [PublishPhoto2], 
+    [vw_ItemsBaseData].[PublishFile] AS [PublishFile], 
+    [vw_ItemsBaseData].[PublishAudio] AS [PublishAudio], 
+    [vw_ItemsBaseData].[PublishVideo] AS [PublishVideo], 
+    [vw_ItemsBaseData].[PublishYoutbe] AS [PublishYoutbe], 
+    [vw_ItemsBaseData].[IsVisitorsParticipations] AS [IsVisitorsParticipations], 
+    [vw_ItemsBaseData].[UserId] AS [UserId], 
+    [vw_ItemsBaseData].[SenderName] AS [SenderName], 
+    [vw_ItemsBaseData].[SenderEMail] AS [SenderEMail], 
+    [vw_ItemsBaseData].[SenderCountryID] AS [SenderCountryID], 
+    [vw_ItemsBaseData].[Reply] AS [Reply], 
+    [vw_ItemsBaseData].[ReplyDate] AS [ReplyDate], 
+    [vw_ItemsBaseData].[IsSeen] AS [IsSeen], 
+    [vw_ItemsBaseData].[IsReplied] AS [IsReplied], 
+    [vw_ItemsBaseData].[IsReviewed] AS [IsReviewed], 
+    [vw_ItemsBaseData].[ToUserID] AS [ToUserID], 
+    [vw_ItemsBaseData].[ActivatedBy] AS [ActivatedBy], 
+    [vw_ItemsBaseData].[ReviewedBy] AS [ReviewedBy], 
+    [vw_ItemsBaseData].[OwnerID] AS [OwnerID], 
+    [vw_ItemsBaseData].[Type] AS [Type], 
+    [vw_ItemsBaseData].[LastModification] AS [LastModification], 
+    [vw_ItemsBaseData].[RequestTotalCount] AS [RequestTotalCount], 
+    [vw_ItemsBaseData].[RequestNewCount] AS [RequestNewCount], 
+    [vw_ItemsBaseData].[OwnerName] AS [OwnerName], 
+    [vw_ItemsBaseData].[PropertyNames] AS [PropertyNames], 
+    [vw_ItemsBaseData].[PropertyValuesString] AS [PropertyValuesString], 
+    [vw_ItemsBaseData].[SpecialOption] AS [SpecialOption], 
+    [vw_ItemsBaseData].[Icon] AS [Icon], 
+    [vw_ItemsBaseData].[Title] AS [Title], 
+    [vw_ItemsBaseData].[AuthorName] AS [AuthorName], 
+    [vw_ItemsBaseData].[Address] AS [Address], 
+    [vw_ItemsBaseData].[LangID] AS [LangID]
+    FROM [dbo].[vw_ItemsBaseData] AS [vw_ItemsBaseData]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GirasDbContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="vw_Categories">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="ModuleTypeID" />
+            <PropertyRef Name="Vistites_Count" />
+            <PropertyRef Name="Date_Added" />
+            <PropertyRef Name="IsAvailable" />
+            <PropertyRef Name="Expr1" />
+            <PropertyRef Name="LangID" />
+            <PropertyRef Name="Title" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="PhotoExtension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ModuleTypeID" Type="Int32" Nullable="false" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="AllItemsCount" Type="Int32" />
+          <Property Name="ActiveItemsCount" Type="Int32" />
+          <Property Name="Path" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="TotalSubItems" Type="Int32" />
+          <Property Name="MostRecentSubItemDate" Type="DateTime" Precision="3" />
+          <Property Name="TypeID" Type="Int32" />
+          <Property Name="Vistites_Count" Type="Int32" Nullable="false" />
+          <Property Name="Date_Added" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ItemDate" Type="DateTime" Precision="3" />
+          <Property Name="IsAvailable" Type="Boolean" Nullable="false" />
+          <Property Name="IsMain" Type="Boolean" />
+          <Property Name="Priority" Type="Int32" />
+          <Property Name="Photo2Extension" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="VideoExtension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="AudioExtension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="FileExtension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="Width" Type="Int32" />
+          <Property Name="YoutubeCode" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="InsertUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdateUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="GoogleLatitude" Type="Double" />
+          <Property Name="GoogleLongitude" Type="Double" />
+          <Property Name="OnlyForRegisered" Type="Boolean" />
+          <Property Name="PublishPhoto" Type="Boolean" />
+          <Property Name="PublishPhoto2" Type="Boolean" />
+          <Property Name="PublishFile" Type="Boolean" />
+          <Property Name="PublishAudio" Type="Boolean" />
+          <Property Name="PublishVideo" Type="Boolean" />
+          <Property Name="PublishYoutbe" Type="Boolean" />
+          <Property Name="OwnerID" Type="Guid" />
+          <Property Name="LastModification" Type="DateTime" Precision="3" />
+          <Property Name="OwnerName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Expr1" Type="Int32" Nullable="false" />
+          <Property Name="LangID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ShortDescription" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KeyWords" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_ItemFiles">
+          <Key>
+            <PropertyRef Name="FileID" />
+            <PropertyRef Name="ItemID" />
+            <PropertyRef Name="FileExtension" />
+            <PropertyRef Name="FileType" />
+            <PropertyRef Name="ModuleTypeID" />
+            <PropertyRef Name="ItemTitle" />
+          </Key>
+          <Property Name="FileID" Type="Int32" Nullable="false" />
+          <Property Name="ItemID" Type="Int32" Nullable="false" />
+          <Property Name="FileExtension" Type="String" MaxLength="512" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FileType" Type="Int32" Nullable="false" />
+          <Property Name="InsertUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdateUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ModuleTypeID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerID" Type="Guid" />
+          <Property Name="OwnerName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="ItemTitle" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_ItemsBaseData">
+          <Key>
+            <PropertyRef Name="ItemID" />
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="ModuleTypeID" />
+            <PropertyRef Name="Vistites_Count" />
+            <PropertyRef Name="Date_Added" />
+            <PropertyRef Name="IsAvailable" />
+            <PropertyRef Name="Title" />
+            <PropertyRef Name="LangID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="ModuleTypeID" Type="Int32" Nullable="false" />
+          <Property Name="PhotoExtension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Url" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="MailBox" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ZipCode" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Tels" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Vistites_Count" Type="Int32" Nullable="false" />
+          <Property Name="Date_Added" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ItemDate" Type="DateTime" Precision="3" />
+          <Property Name="ItemEndDate" Type="DateTime" Precision="3" />
+          <Property Name="IsAvailable" Type="Boolean" Nullable="false" />
+          <Property Name="IsMain" Type="Boolean" />
+          <Property Name="Priority" Type="Int32" />
+          <Property Name="AuthorID" Type="Int32" />
+          <Property Name="Photo2Extension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="VideoExtension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="AudioExtension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="FileExtension" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="Width" Type="Int32" />
+          <Property Name="InsertUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdateUserName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ActiveComments" Type="Int32" />
+          <Property Name="InactiveComments" Type="Int32" />
+          <Property Name="YoutubeCode" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="RatingCount" Type="Int32" />
+          <Property Name="RatingValue" Type="Int32" />
+          <Property Name="GoogleLatitude" Type="Double" />
+          <Property Name="GoogleLongitude" Type="Double" />
+          <Property Name="Price" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="OnlyForRegisered" Type="Boolean" />
+          <Property Name="PublishPhoto" Type="Boolean" />
+          <Property Name="PublishPhoto2" Type="Boolean" />
+          <Property Name="PublishFile" Type="Boolean" />
+          <Property Name="PublishAudio" Type="Boolean" />
+          <Property Name="PublishVideo" Type="Boolean" />
+          <Property Name="PublishYoutbe" Type="Boolean" />
+          <Property Name="IsVisitorsParticipations" Type="Boolean" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="SenderName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="SenderEMail" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="SenderCountryID" Type="Int32" />
+          <Property Name="Reply" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ReplyDate" Type="DateTime" Precision="3" />
+          <Property Name="IsSeen" Type="Boolean" />
+          <Property Name="IsReplied" Type="Boolean" />
+          <Property Name="IsReviewed" Type="Boolean" />
+          <Property Name="ToUserID" Type="Guid" />
+          <Property Name="ActivatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ReviewedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerID" Type="Guid" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="LastModification" Type="DateTime" Precision="3" />
+          <Property Name="RequestTotalCount" Type="Int32" />
+          <Property Name="RequestNewCount" Type="Int32" />
+          <Property Name="OwnerName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="PropertyNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyValuesString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SpecialOption" Type="Boolean" />
+          <Property Name="Icon" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AuthorName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="LangID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GirasDbModel" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vw_Categories" EntityType="Self.vw_Categories" />
+          <EntitySet Name="vw_ItemFiles" EntityType="Self.vw_ItemFiles" />
+          <EntitySet Name="vw_ItemsBaseData" EntityType="Self.vw_ItemsBaseData" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GirasDbContextStoreContainer" CdmEntityContainer="GirasDbModel">
+          <EntitySetMapping Name="vw_Categories">
+            <EntityTypeMapping TypeName="GirasDbContext.vw_Categories">
+              <MappingFragment StoreEntitySet="vw_Categories">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="PhotoExtension" ColumnName="PhotoExtension" />
+                <ScalarProperty Name="ModuleTypeID" ColumnName="ModuleTypeID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="AllItemsCount" ColumnName="AllItemsCount" />
+                <ScalarProperty Name="ActiveItemsCount" ColumnName="ActiveItemsCount" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="TotalSubItems" ColumnName="TotalSubItems" />
+                <ScalarProperty Name="MostRecentSubItemDate" ColumnName="MostRecentSubItemDate" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="Vistites_Count" ColumnName="Vistites_Count" />
+                <ScalarProperty Name="Date_Added" ColumnName="Date_Added" />
+                <ScalarProperty Name="ItemDate" ColumnName="ItemDate" />
+                <ScalarProperty Name="IsAvailable" ColumnName="IsAvailable" />
+                <ScalarProperty Name="IsMain" ColumnName="IsMain" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="Photo2Extension" ColumnName="Photo2Extension" />
+                <ScalarProperty Name="VideoExtension" ColumnName="VideoExtension" />
+                <ScalarProperty Name="AudioExtension" ColumnName="AudioExtension" />
+                <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="YoutubeCode" ColumnName="YoutubeCode" />
+                <ScalarProperty Name="InsertUserName" ColumnName="InsertUserName" />
+                <ScalarProperty Name="LastUpdateUserName" ColumnName="LastUpdateUserName" />
+                <ScalarProperty Name="GoogleLatitude" ColumnName="GoogleLatitude" />
+                <ScalarProperty Name="GoogleLongitude" ColumnName="GoogleLongitude" />
+                <ScalarProperty Name="OnlyForRegisered" ColumnName="OnlyForRegisered" />
+                <ScalarProperty Name="PublishPhoto" ColumnName="PublishPhoto" />
+                <ScalarProperty Name="PublishPhoto2" ColumnName="PublishPhoto2" />
+                <ScalarProperty Name="PublishFile" ColumnName="PublishFile" />
+                <ScalarProperty Name="PublishAudio" ColumnName="PublishAudio" />
+                <ScalarProperty Name="PublishVideo" ColumnName="PublishVideo" />
+                <ScalarProperty Name="PublishYoutbe" ColumnName="PublishYoutbe" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="LastModification" ColumnName="LastModification" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="LangID" ColumnName="LangID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="KeyWords" ColumnName="KeyWords" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_ItemFiles">
+            <EntityTypeMapping TypeName="GirasDbContext.vw_ItemFiles">
+              <MappingFragment StoreEntitySet="vw_ItemFiles">
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="InsertUserName" ColumnName="InsertUserName" />
+                <ScalarProperty Name="LastUpdateUserName" ColumnName="LastUpdateUserName" />
+                <ScalarProperty Name="ModuleTypeID" ColumnName="ModuleTypeID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="ItemTitle" ColumnName="ItemTitle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_ItemsBaseData">
+            <EntityTypeMapping TypeName="GirasDbContext.vw_ItemsBaseData">
+              <MappingFragment StoreEntitySet="vw_ItemsBaseData">
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="ModuleTypeID" ColumnName="ModuleTypeID" />
+                <ScalarProperty Name="PhotoExtension" ColumnName="PhotoExtension" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MailBox" ColumnName="MailBox" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="Tels" ColumnName="Tels" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Vistites_Count" ColumnName="Vistites_Count" />
+                <ScalarProperty Name="Date_Added" ColumnName="Date_Added" />
+                <ScalarProperty Name="ItemDate" ColumnName="ItemDate" />
+                <ScalarProperty Name="ItemEndDate" ColumnName="ItemEndDate" />
+                <ScalarProperty Name="IsAvailable" ColumnName="IsAvailable" />
+                <ScalarProperty Name="IsMain" ColumnName="IsMain" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+                <ScalarProperty Name="Photo2Extension" ColumnName="Photo2Extension" />
+                <ScalarProperty Name="VideoExtension" ColumnName="VideoExtension" />
+                <ScalarProperty Name="AudioExtension" ColumnName="AudioExtension" />
+                <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="InsertUserName" ColumnName="InsertUserName" />
+                <ScalarProperty Name="LastUpdateUserName" ColumnName="LastUpdateUserName" />
+                <ScalarProperty Name="ActiveComments" ColumnName="ActiveComments" />
+                <ScalarProperty Name="InactiveComments" ColumnName="InactiveComments" />
+                <ScalarProperty Name="YoutubeCode" ColumnName="YoutubeCode" />
+                <ScalarProperty Name="RatingCount" ColumnName="RatingCount" />
+                <ScalarProperty Name="RatingValue" ColumnName="RatingValue" />
+                <ScalarProperty Name="GoogleLatitude" ColumnName="GoogleLatitude" />
+                <ScalarProperty Name="GoogleLongitude" ColumnName="GoogleLongitude" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="OnlyForRegisered" ColumnName="OnlyForRegisered" />
+                <ScalarProperty Name="PublishPhoto" ColumnName="PublishPhoto" />
+                <ScalarProperty Name="PublishPhoto2" ColumnName="PublishPhoto2" />
+                <ScalarProperty Name="PublishFile" ColumnName="PublishFile" />
+                <ScalarProperty Name="PublishAudio" ColumnName="PublishAudio" />
+                <ScalarProperty Name="PublishVideo" ColumnName="PublishVideo" />
+                <ScalarProperty Name="PublishYoutbe" ColumnName="PublishYoutbe" />
+                <ScalarProperty Name="IsVisitorsParticipations" ColumnName="IsVisitorsParticipations" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="SenderEMail" ColumnName="SenderEMail" />
+                <ScalarProperty Name="SenderCountryID" ColumnName="SenderCountryID" />
+                <ScalarProperty Name="Reply" ColumnName="Reply" />
+                <ScalarProperty Name="ReplyDate" ColumnName="ReplyDate" />
+                <ScalarProperty Name="IsSeen" ColumnName="IsSeen" />
+                <ScalarProperty Name="IsReplied" ColumnName="IsReplied" />
+                <ScalarProperty Name="IsReviewed" ColumnName="IsReviewed" />
+                <ScalarProperty Name="ToUserID" ColumnName="ToUserID" />
+                <ScalarProperty Name="ActivatedBy" ColumnName="ActivatedBy" />
+                <ScalarProperty Name="ReviewedBy" ColumnName="ReviewedBy" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="LastModification" ColumnName="LastModification" />
+                <ScalarProperty Name="RequestTotalCount" ColumnName="RequestTotalCount" />
+                <ScalarProperty Name="RequestNewCount" ColumnName="RequestNewCount" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+                <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+                <ScalarProperty Name="SpecialOption" ColumnName="SpecialOption" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LangID" ColumnName="LangID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

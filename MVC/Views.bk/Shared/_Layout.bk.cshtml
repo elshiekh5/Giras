@@ -1,0 +1,35 @@
+﻿@using DCCMSNameSpace;
+@{
+    // ViewBag.Title = "Home Page";
+    this.Layout = null;
+    string BodyClasses = ViewBag.BodyClasses;
+    if (string.IsNullOrEmpty(BodyClasses))
+    {
+        BodyClasses = "page page-template-default";
+    }
+    ViewBag.BodyClasses = BodyClasses;
+    this.Layout = "_MasterLayout.cshtml";
+}
+
+
+        <div class="page-title-container">
+            <div class="page-title">
+                <div class="container">
+                    <h1 class="entry-title" style="color: #000000">@ViewBag.PageTitle</h1>
+                </div>
+            </div>
+            <ul class="breadcrumbs"><li><a href="/" title="Home">@Resources.SiteText.Home</a></li><li class="active">@ViewBag.PageTitle</li></ul>
+        </div>
+
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <div id="main" class="entry-content col-xs-12">
+                        @RenderBody()
+                    </div><!-- #main -->
+
+                </div>
+            </div>
+        </section>
+        <!-- #content -->
+

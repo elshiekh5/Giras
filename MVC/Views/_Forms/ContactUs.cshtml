@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "ContactUs";
+}
+
+<div class="wpb_wrapper">
+    <div role="form" class="wpcf7" id="wpcf7-f491-p3002-o1" lang="en-US" dir="ltr">
+        <div class="screen-reader-response"></div>
+        <div id="BigContactForm" action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+            <div id="contentAlert" class="alert" style="display:none;">
+                <a href="#" class="close" data-dismiss="alert">×</a>
+                <span id="contactResult"> There was a problem with your network connection.</span>
+            </div>
+
+            <div style="display: none;">
+                <input type="hidden" name="_wpcf7" value="491">
+                <input type="hidden" name="_wpcf7_version" value="4.4.2">
+                <input type="hidden" name="_wpcf7_locale" value="en_US">
+                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f491-p3002-o1">
+                <input type="hidden" name="_wpnonce" value="ae05e4ac41">
+            </div>
+            <div class="row">
+                <div class="form-group col-sms-12 col-sm-12">
+                    <span class="wpcf7-form-control-wrap first-name"><input type="text" id="name" name="first-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required full-width input-text" aria-required="true" aria-invalid="false" placeholder="@Resources.SiteText.ContactFormName"></span>
+                </div>
+                <div class="form-group col-sms-12 col-sm-12">
+                    <span class="wpcf7-form-control-wrap "><input type="text" id="mobile" name="first-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required full-width input-text" aria-required="true" aria-invalid="false" placeholder="@Resources.SiteText.ContactMobile"></span>
+                </div>
+                <div class="form-group col-sms-12 col-sm-12">
+                    <span class="wpcf7-form-control-wrap your-email"><input type="email" id="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email full-width input-text" aria-required="true" aria-invalid="false" placeholder="@Resources.SiteText.ContactFormEmail"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <span class="wpcf7-form-control-wrap your-message"><textarea id="message" name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea full-width input-text" aria-invalid="false" placeholder="@Resources.SiteText.ContactFormMessage"></textarea></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" id="btnSendMessage" value="@Resources.SiteText.ContactFormSend" class="wpcf7-form-control wpcf7-submit btn btn-md style1">
+            </div>
+            <div class="wpcf7-response-output wpcf7-display-none"></div>
+        </div>
+    </div>
+</div>
+
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            //debugger;
+            jQuery("#btnSendMessage").click(function (e) {
+                //debugger;
+                SendContactsMessage("#BigContactForm", e);
+            });
+
+
+        });
+    </script>
+    <script type="text/javascript">
+        function SendContactsMessage(formContainerSelector, e) {
+            debugger;
+            var message = {};
+            var Container = jQuery(formContainerSelector);
+            message.Name = Container.find("#name").val();
+            message.Mobile = Container.find("#mobile").val();
+            message.Email = Container.find("#email").val();
+            message.Message = Container.find("#message").val();
+            //
+            //Container.find("#LoadingAlert").show();
+            jQuery.ajax({
+                type: 'POST',
+                url: '/home/contactus',
+                data: "{message:" + JSON.stringify(message) + "}",
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (res) {
+                    //debugger;
+                    // jQuery("#LoadingAlert").hide();
+                    Container.find("#contentAlert").addClass("alert-success");
+                    Container.find("#contentAlert").show();
+                    Container.find("#contactResult").text(res.Message);
+
+                    //debugger;
+                    //-----------------
+                    //Clear form
+                    Container.find("#name").val("");
+                    Container.find("#email").val("");
+                    Container.find("#mobile").val("");
+                    Container.find("#message").val("");
+                    //-----------------
+                },
+                error: function (err) {
+                    //debugger;
+                    //Container.find("#LoadingAlert").hide();
+                    Container.find("#contentAlert").addClass("alert-danger");
+                    Container.find("#contentAlert").show();
+                    Container.find("#contactResult").text(err);
+                    //debugger;
+                    //alert(err);
+                    console.log(err);
+                }
+            });
+            e.preventDefault();
+
+
+        }
+
+    </script>

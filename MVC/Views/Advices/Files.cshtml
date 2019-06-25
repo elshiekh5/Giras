@@ -1,0 +1,48 @@
+﻿@using AppService;
+@using DCCMSNameSpace;
+@{
+    ItemsModulesOptions currentModule = ViewBag.CurrentModule;
+    List<AppService.FrontItemsModel> itemList = AppService.FrontItemsController.GetModuleData(currentModule.ModuleTypeID, "Services");
+}
+
+
+<div class="vc_row wpb_row row">
+    @if (itemList != null)
+    {
+        foreach (var item in itemList)
+        {
+            
+            <div class="col-sm-4 wpb_column ">
+        <div class="wpb_wrapper">
+
+            <div class="wpb_single_image wpb_content_element vc_align_center   imgs">
+
+                <figure class="wpb_wrapper vc_figure">
+                    <div class="vc_single_image-wrapper   vc_box_border_grey"><img data-vc-zoom="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)" width="300" height="169" src="@(DCCMSNameSpace.SiteSettings.Site_AdminUrl + item.PhotoPathOriginal)" class="vc_single_image-img attachment-medium" alt="law-legal-book-ss-1920" srcset="http://arbitrationar.genevahumanrights.org/wp-content/uploads/2016/05/law-legal-book-ss-1920-300x169.jpg 300w, http://arbitrationar.genevahumanrights.org/wp-content/uploads/2016/05/law-legal-book-ss-1920-768x432.jpg 768w, http://arbitrationar.genevahumanrights.org/wp-content/uploads/2016/05/law-legal-book-ss-1920-710x399.jpg 710w, http://arbitrationar.genevahumanrights.org/wp-content/uploads/2016/05/law-legal-book-ss-1920-480x270.jpg 480w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+                </figure>
+            </div>
+
+            <div class="wpb_text_column wpb_content_element ">
+                <div class="wpb_wrapper">
+
+                    <div class="box-content">
+                        <h4 class="box-title" style="text-align: center;"><a href="@item.FilePath">@item.Title</a></h4>
+                        <p><a class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-info" title="تحميل" href="@item.FilePath" target="_self">تحميل</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        
+            
+        }
+
+    }
+    
+    
+</div>
+
+<script type='text/javascript' src='http://arbitrationar.genevahumanrights.org/wp-content/plugins/js_composer/assets/lib/bower/zoom/jquery.zoom.min.js?ver=4.9.1'></script>
+<script type='text/javascript' src='http://arbitrationar.genevahumanrights.org/wp-content/plugins/js_composer/assets/lib/vc_image_zoom/vc_image_zoom.min.js?ver=4.9.1'></script>
